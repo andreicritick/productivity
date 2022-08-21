@@ -4,14 +4,18 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-	font-family: $ff-title;
+	font-family: $ff-quick;
 	font-weight: $fw-bold;
 	line-height: $lh-title;
-	margin: 0 0 1rem
+	margin: 0
 }
 
 h1, .h1 {
-	font-size: 32px;
+	font-size: 48px;
+	line-height: 1.25;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: $fw-light;
+	color: $headings;
 
 	@media all and (min-width: $lg) {
 		font-size: 36px
@@ -19,7 +23,11 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 24px;
+	font-family: $ff-quick;
+	font-weight: $fw-medium;
+	font-size: 36px;
+	line-height: 1.25;
+	color: $headings;
 
 	@media all and (min-width: $lg) {
 		font-size: 36px
@@ -27,29 +35,36 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 30px
+	font-family: $ff-quick;
+	font-weight: $fw-medium;
+	font-size: 24px;
+	line-height: 1.25;
+	color: $headings
 }
 
 h4, .h4 {
-	font-size: $fs-xl;
+	font-family: $ff-quick;
+	font-weight: $fw-light;
+	font-size: 48px;
+	line-height: 1.25;
+	color: $white;
 
 	@media all and (min-width: $lg) {
 		font-size: 24px
 	}
 }
 
-h5, .h5 {
-	font-size: $fs-xl
-}
-
-h6, .h6 {
-	font-size: $fs-lg
-}
-
 a {
 	display: inline-block;
 	text-decoration: underline;
 	transition: color ease-out $tr;
+	font-family: $ff-quick;
+	font-weight: $fw-medium;
+	font-size: 12px;
+	line-height: 1.25;
+	letter-spacing: $ls05;
+	text-transform: capitalize;
+	color:	$item;
 
 	&:hover {
 		text-decoration: none
@@ -57,11 +72,28 @@ a {
 }
 
 p {
+	font-family: $ff-roboto;
+	font-weight: $fw-regular;
+	font-size: 14px;
+	line-height: 1.7;
+	letter-spacing: $ls03;
+	color: $text;
 	margin-top: 0;
+	padding: 0;
 
 	&:last-of-type {
 		margin-bottom: 0
 	}
+}
+
+.subtitle {
+	font-family: $ff-roboto;
+	font-weight: $fw-medium;
+	font-size: 10px;
+	line-height: 1.2;
+	letter-spacing: $ls01;
+	text-transform: uppercase;
+	color: $headings
 }
 
 b, strong {
