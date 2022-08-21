@@ -4,26 +4,31 @@ $sm	: 480px;
 $md	: 768px;
 $lg	: 992px;
 $xl	: 1200px;
-$xxl: 1366px;
+$xxl: 1400px;
 
 // Container max-width.
-$container-md: 760px;
-$container-lg: 990px;
-$container-xl: 1200px;
+$container-md: 800px;
+$container-lg: 1030px;
+$container-xl: 1240px;
+$container-xxl: 1480px;
 
 // Container padding.
-$container-padding: 24px;
+$container-padding: 20px;
 
 // Font families.
-$ff			: Arial, sans-serif;
-$ff-title	: Arial, sans-serif;
+$ff-roboto	: 'Roboto', sans-serif;
+$ff-quick	: 'Quicksand', sans-serif;
+$ff-os	    : 'Open Sans', sans-serif;
 
 // Font sizes.
+$fs-xxs	: 10px;
 $fs-xs	: 12px;
-$fs-sm	: 14px;
-$fs-md	: 16px;
-$fs-lg	: 18px;
-$fs-xl	: 20px;
+$fs-s	: 13px;
+$fs-sm	: 15px;
+$fs-md	: 18px;
+$fs-lg	: 24px;
+$fs-xl	: 36px;
+$fs-xxl	: 48px;
 
 // Font weights.
 $fw-light	: 300;
@@ -33,12 +38,40 @@ $fw-semibold: 600;
 $fw-bold	: 700;
 
 // Line heights.
-$lh			: 1.5;
-$lh-title	: 1.3;
+$lh			: 1.9;
+$lh-title	: 1.25;
 
 // Colors.
-$white	: #FFFFFF;
-$black	: #000000;
+//common
+$white	       : #FFFFFF;
+$black	       : #000000;
+$accent        : #5E81FE;
+//backgrounds
+$bg            : #F5F8FF;
+$bg-input      : #EFEFF7;
+$bg-customers  : linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+$bg-hero       : linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+$bg-stat-light : linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+$bg-stat-dark  : linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+//text
+$headings  : #3D4F9F;
+$subhead   : #4074F8;
+$text      : #676F95;
+$subtext   : #DFE2EF;
+$item      : #697CA6;
+$stat-text : #5E80FF;
+$plan-text : #8D96BD;
+//buttons
+$button-bg-blue   : #D2E1FF;
+$button-bg-orange : #FFD7D7;
+$orange           : #D43F3F;
+$blue             : #3A79FF;
+$button-text      : #ADB4D2;
+
+//letter-spacing
+$ls01            :  0.01em;
+$ls03            :  0.03em;
+$ls05            :  0.05em;
 
 // Others.
-$tr: 0.35s;
+$tr: ease 0.35s;
