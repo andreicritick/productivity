@@ -1,0 +1,61 @@
+.header {
+    padding: 19px 0 19px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+
+    &-wrapp {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-inner-left {
+        display: flex;
+        align-items: center;
+    }
+
+    &-link {
+        margin-right: 75px;
+    }
+
+    &-logo {
+        width: 26px;
+        height: 26px;
+        background: $accent;
+        border-radius: 50%;
+    }
+
+    &-menu {
+        display: flex;
+    }
+
+    &-item {
+        margin-right: 42px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &-inner-right {
+        display: flex;
+        align-items: center;
+    }
+
+    &-icons {
+        display: flex;
+    }
+
+    &-icon {
+        margin-right: 34px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &-button {
+        margin-left: 46px;
+    }
+}

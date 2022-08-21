@@ -1,0 +1,18 @@
+.header-button {
+	font-family: $ff-quick;
+	font-weight: $fw-bold;
+	font-size: $fs-s;
+	line-height: $lh-title;
+	display: flex;
+	align-items: center;
+	padding: 13px 16px;
+	border: 0;
+	border-radius: 2px;
+	background: $button-bg-blue;
+	color: $blue;
+	cursor: pointer;
+
+	&:hover {
+		opacity: $opacity;
+	}
+}

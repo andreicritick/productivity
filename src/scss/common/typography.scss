@@ -56,7 +56,6 @@ h4, .h4 {
 
 a {
 	display: inline-block;
-	text-decoration: underline;
 	transition: color ease-out $tr;
 	font-family: $ff-quick;
 	font-weight: $fw-medium;
@@ -65,9 +64,10 @@ a {
 	letter-spacing: $ls05;
 	text-transform: capitalize;
 	color:	$item;
+	text-decoration: none;
 
 	&:hover {
-		text-decoration: none
+		opacity: $opacity;
 	}
 }
 
