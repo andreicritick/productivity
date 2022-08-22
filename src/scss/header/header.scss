@@ -1,0 +1,228 @@
+.header {
+	padding: 19px 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	background: $white;
+	z-index: 100;
+	transition:
+		background-color ease-out $tr,
+		padding ease-out $tr,
+		box-shadow ease-out $tr;
+
+		@media all and (min-width: $md) {
+			border-bottom: 3px solid #d9e4f8;
+		}
+
+	&.scrolled {
+		box-shadow: 0 10px 0 0 $bg-stat-light;
+		padding: 12px 0 12px;
+	}
+
+	&-wrapp {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media all and (min-width: $lg) {
+			justify-content: space-between;
+        }
+
+		&.opened {
+			width: 100%;
+			min-height: 100vh;
+			padding-top: 50px;
+			display: flex;
+			justify-content: space-evenly;
+			overflow-y: auto;
+
+			@media all and (min-width: $md) {
+				display: none;
+			}
+
+			.header-inner-left {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			.header-inner-right {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+			}
+
+			.header-menu {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-top: 50px;
+			}
+
+			.header-item {
+				margin-right: 0;
+				margin-bottom: 30px;
+
+				&-link {
+					font-size: $fs-lg;
+				}
+			}
+
+			.header-icons {
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				margin-bottom: 50px;
+			}
+
+			.header-button {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 100px;
+			}
+
+			.header-icon {
+				img {
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
+	}
+
+	&-inner-left {
+		display: none;
+		align-items: center;
+
+		@media all and (min-width: $md) {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin-bottom: 20px;
+        }
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 0;
+			width: auto;
+			align-items: center;
+			justify-content: baseline;
+		}
+	}
+
+	&-link {
+		margin-right: 75px;
+	}
+
+	&-logo {
+		display: none;
+		width: 26px;
+		height: 26px;
+		background: $accent;
+		border-radius: 50%;
+
+		@media all and (min-width: $lg) {
+			display: block;
+        }
+	}
+
+	&-menu {
+		display: none;
+
+		@media all and (min-width: $md) {
+			width: 100%; //
+			display: flex;
+			justify-content: space-between;
+        }
+
+		@media all and (min-width: $lg) {
+			width: auto;
+			display: flex;
+			justify-content: baseline;
+		}
+	}
+
+	&-item {
+		a:hover {
+			color: $accent;
+			opacity: 1;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 32px;
+		}
+
+		@media all and (min-width: $xxl) {
+			margin-right: 42px;
+        }
+	}
+
+	&-inner-right {
+		display: none;
+		align-items: center;
+
+		@media all and (min-width: $md) {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap	;
+			justify-content: space-evenly;
+        }
+
+		@media all and (min-width: $lg) {
+			width: auto;
+			justify-content: flex-start	;
+			flex-wrap: nowrap;
+		}
+	}
+
+	&-icons {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+
+		@media all and (min-width: $lg) {
+			justify-content: center;
+		}
+
+		@media all and (min-width: $xxl) {
+			align-items: center;
+        }
+	}
+
+	&-icon {
+		margin-right: 34px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media all and (min-width: $lg) {
+			display: flex;
+		}
+	}
+
+	&-button {
+		margin-left: 46px;
+
+		@media all and (min-width: $md) {
+			display: none;
+        }
+
+		@media all and (min-width: $lg) {
+			display: block;
+			width: auto;
+			white-space: nowrap;
+		}
+	}
+
+	.burger-menu {
+		display: flex;
+		justify-content: center;
+	}
+}
