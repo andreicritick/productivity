@@ -1,0 +1,147 @@
+.header-form {
+    position:fixed;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index: 100;
+    overflow-y: auto;
+    padding: 20px;
+    background: $button-bg-orange;
+
+    .form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 280px;
+        height:370px;
+        position:relative;
+        top: 0;
+        right: 0;
+        margin: auto 0;
+        border-radius: 20px;
+
+        @media all and (min-width: $sm) {
+            width: 380px;
+        }
+
+        @media all and (min-width: $md) {
+            justify-content: space-evenly;
+            width: 600px;
+        }
+
+        @media all and (min-width: $lg) {
+            width: 800px;
+            height: 500px;
+        }
+
+        @media all and (min-width: $xl) {
+            width: 1000px;
+            height: 600px;
+        }
+    }
+
+    &.opened {
+        display: flex;
+    }
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0;
+}
+
+legend {
+    margin: 0 auto 20px auto;
+    font-family: $ff-quick;
+    font-size: $fs-lg;
+
+    @media all and (min-width: $md) {
+        font-size: $fs-xl;
+	}
+}
+
+input {
+    width: 250px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-family: $ff-quick;
+    font-size: $fs-xs;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    transition: $tr;
+    background-color: $bg-input;
+
+    @media all and (min-width: $sm) {
+        width: 350px;
+	}
+
+    @media all and (min-width: $md) {
+        width: 500px;
+        font-size: $fs-md;
+	}
+
+    @media all and (min-width: $lg) {
+        width: 700px;
+        height: 40px;
+	}
+
+    @media all and (min-width: $xl) {
+        width: 900px;
+        height: 60px;
+	}
+}
+
+.date {
+    height: 40px;
+}
+
+.for-date {
+    font-family: $ff-quick;
+    font-size: $fs-md;
+    margin-bottom: 10px;
+
+    @media all and (min-width: $md) {
+        font-size: $fs-lg;
+    }
+}
+
+textarea {
+    font-family: $ff-quick;
+    font-size: $fs-xs;
+    padding: 10px;
+    width: 250px;
+    height: 100px;
+    resize: none;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 10px;
+    transition: $tr;
+    background-color: $bg-input;
+
+    @media all and (min-width: $sm) {
+        width: 350px;
+	}
+
+    @media all and (min-width: $md) {
+        width: 500px;
+        font-size: $fs-md;
+	}
+
+    @media all and (min-width: $lg) {
+        width: 700px;
+    }
+
+    @media all and (min-width: $xl) {
+        width: 900px;
+        height: 150px;
+    }
+}

@@ -5,6 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Productivity</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
 	<link rel="stylesheet" href="css/main.min.css" />
 	<script src="js/main.min.js" defer></script>
 </head>
@@ -12,9 +16,14 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				<div class="header-wrapp">
+				<div class="burger-menu">
+					<div class="burger-button">
+						<span></span>
+					</div>
+				</div>
+				<div class="header-wrapp" id="bodyLock">
 					<div class="header-inner-left">
-						<a class="header-link" href="">
+						<a class="header-link" href="/">
 							<div class="header-logo"></div>
 						</a>
 						<div class="header-menu">
@@ -27,8 +36,10 @@
 					<div class="header-inner-right">
 						<div class="header-icons">
 							@@loop( "header-icon.html", [
-									{ "img": "img/header/facebook-logo.svg" }, { "img": "img/header/telegram-logo.svg" },
-									{ "img": "img/header/twit-logo.svg" }, { "img": "img/header/m-logo.svg" }
+									{ "img": "img/header/facebook-logo.svg", "href": "https://www.facebook.com/" },
+									{ "img": "img/header/telegram-logo.svg", "href": "https://telegram.org/" },
+									{ "img": "img/header/twit-logo.svg", "href": "https://investor.twitterinc.com/" },
+									{ "img": "img/header/m-logo.svg", "href": "https://mail.ru/" }
 								] )
 						</div>
 						<button class="header-button">

@@ -16,3 +16,155 @@
 		opacity: $opacity;
 	}
 }
+
+.burger-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+
+	@media all and (min-width: $md) {
+		display: none;
+	}
+
+	span {
+		position: absolute;
+		top: 5px;
+		right: 0;
+		width: 100%;
+		height: 8px;
+		background: $bg-stat-dark;
+		border-radius: 10px;
+
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			top: 5px;
+			right: 0;
+			top: 15px;
+			right: 0;
+			width: 100%;
+			height: 8px;
+			background: $bg-stat-dark;
+			border-radius: 10px;
+		}
+
+		&::after {
+			content: "";
+			top: 30px;
+			right: 0;
+		}
+	}
+
+	&:hover{
+		opacity: $opacity;
+	}
+
+	&.opened {
+		span {
+			position: absolute;
+			top: 20px;
+			right: 0;
+			width: 100%;
+			height: 8px;
+			background: $bg-stat-dark;
+			border-radius: 10px;
+			transform: rotate(-45deg);
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				right: 0;
+				width: 100%;
+				height: 8px;
+				background: $bg-stat-dark;
+				border-radius: 10px;
+				transform: rotate(90deg);
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+.form-button {
+	width: 100%;
+	height: 60px;
+	font-size: $fs-sm;
+	border-radius: 50px;
+	border: 0;
+	background-color: $bg-input;
+	color: darkgray;
+	cursor: pointer;
+
+	@media all and (min-width: $sm) {
+		font-size: $fs-md;
+	}
+
+	&:hover {
+		opacity: $opacity;
+	}
+}
+
+.close-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        top: -47px;
+        right: 10px;
+        background-image: none;
+        width: 30px;
+        height: 30px;
+
+		@media all and (min-width: $md) {
+			right: 45px;
+		}
+
+		@media all and (min-width: $lg) {
+			top: -20px;
+		}
+
+		@media all and (min-width: $xl) {
+			top: -31px;
+		}
+    }
+
+    span:hover::before, span:hover::after {
+        background: red;
+    }
+
+    span::before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        right: 0;
+        height: 4px;
+        width: 100%;
+        transform: rotate(-45deg);
+        background: $bg-input;
+        transition: $tr;
+    }
+
+    span:after {
+        content: "";
+        position: absolute;
+        top: 14px;
+        right: 0;
+        height: 4px;
+        width: 100%;
+        background: $bg-input;
+        transform: rotate(45deg);
+        transition: $tr;
+    }
+}

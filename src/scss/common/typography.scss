@@ -18,7 +18,6 @@ h1, .h1 {
 	color: $headings;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
 	}
 }
 
@@ -30,7 +29,6 @@ h2, .h2 {
 	color: $headings;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
 	}
 }
 
@@ -50,7 +48,7 @@ h4, .h4 {
 	color: $white;
 
 	@media all and (min-width: $lg) {
-		font-size: 24px
+
 	}
 }
 
