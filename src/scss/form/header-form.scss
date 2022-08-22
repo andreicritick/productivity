@@ -13,6 +13,8 @@
     background: $button-bg-orange;
 
     .form {
+        width: 100%;
+        max-width: 1000px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -26,23 +28,8 @@
         margin: auto 0;
         border-radius: 20px;
 
-        @media all and (min-width: $sm) {
-            width: 380px;
-        }
-
         @media all and (min-width: $md) {
             justify-content: space-evenly;
-            width: 600px;
-        }
-
-        @media all and (min-width: $lg) {
-            width: 800px;
-            height: 500px;
-        }
-
-        @media all and (min-width: $xl) {
-            width: 1000px;
-            height: 600px;
         }
     }
 
@@ -69,7 +56,8 @@ legend {
 }
 
 input {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: 25px;
     margin-bottom: 10px;
     font-family: $ff-quick;
@@ -81,21 +69,21 @@ input {
     background-color: $bg-input;
 
     @media all and (min-width: $sm) {
-        width: 350px;
+        max-width: 350px;
 	}
 
     @media all and (min-width: $md) {
-        width: 500px;
+        max-width: 500px;
         font-size: $fs-md;
 	}
 
     @media all and (min-width: $lg) {
-        width: 700px;
+        max-width: 700px;
         height: 40px;
 	}
 
     @media all and (min-width: $xl) {
-        width: 900px;
+        max-width: 900px;
         height: 60px;
 	}
 }

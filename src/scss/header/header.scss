@@ -1,5 +1,5 @@
 .header {
-	padding: 19px 0 19px;
+	padding: 19px 0;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -28,6 +28,69 @@
 		@media all and (min-width: $lg) {
 			justify-content: space-between;
         }
+
+		&.opened {
+			width: 100%;
+			min-height: 100vh;
+			padding-top: 50px;
+			display: flex;
+			justify-content: space-evenly;
+			overflow-y: auto;
+
+			@media all and (min-width: $md) {
+				display: none;
+			}
+
+			.header-inner-left {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			.header-inner-right {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+			}
+
+			.header-menu {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-top: 50px;
+			}
+
+			.header-item {
+				margin-right: 0;
+				margin-bottom: 30px;
+
+				&-link {
+					font-size: $fs-lg;
+				}
+			}
+
+			.header-icons {
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				margin-bottom: 50px;
+			}
+
+			.header-button {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 100px;
+			}
+
+			.header-icon {
+				img {
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
 	}
 
 	&-inner-left {
@@ -82,7 +145,7 @@
 	}
 
 	&-item {
-		& a:hover {
+		a:hover {
 			color: $accent;
 			opacity: 1;
 		}
@@ -161,68 +224,5 @@
 	.burger-menu {
 		display: flex;
 		justify-content: center;
-	}
-
-	.header-wrapp.opened {
-		width: 100%;
-		min-height: 100vh;
-		padding-top: 50px;
-		display: flex;
-		justify-content: space-evenly;
-		overflow-y: auto;
-
-		@media all and (min-width: $md) {
-			display: none;
-        }
-
-		.header-inner-left {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-
-		.header-inner-right {
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
-		}
-
-		.header-menu {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding-top: 50px;
-		}
-
-		.header-item {
-			margin-right: 0;
-			margin-bottom: 30px;
-
-			&-link {
-				font-size: $fs-lg;
-			}
-		}
-
-		.header-icons {
-			width: 100%;
-			display: flex;
-			justify-content: space-evenly;
-			margin-bottom: 50px;
-		}
-
-		.header-button {
-			display: flex;
-			justify-content: center;
-			width: 100%;
-			margin-left: 0;
-			margin-bottom: 100px;
-		}
-
-		.header-icon {
-			img {
-				width: 30px;
-				height: 30px;
-			}
-		}
 	}
 }
