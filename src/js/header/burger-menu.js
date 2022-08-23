@@ -8,8 +8,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
 } )
 
 const toggleBurgerMenu = () => {
-    const burgerMenu   = document.querySelector( '.header-wrapp' )
-    const burgerButton = document.querySelector( '.burger-button' )
+    const burgerMenu    = document.querySelector( '.header-wrapp' )
+    const burgerButton  = document.querySelector( '.burger-button' )
     const targetElement = document.querySelector( '#bodyLock' )
 
         if ( ! burgerButton && ! burgerMenu && targetElement ) return
@@ -31,7 +31,6 @@ const toggleBurgerMenu = () => {
 
     window.addEventListener( 'resize', () => {
         const windowWidth = window.innerWidth
-
         if( windowWidth >= WINDOW_WIDTH_MD )
             burgerMenu.classList.remove( 'opened' )
             burgerButton.classList.remove ( 'opened' )

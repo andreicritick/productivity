@@ -1,7 +1,8 @@
 .hero {
-	padding: 172px 0 224px;
+	padding: 172px 0 238px;
 	background-image: url( '../img/hero/hero-bg.png' ) no-repeat;
-	background-size: 100% 100%;
+	background-size: contain;
+	background-position: center center;
 
 	&-text-wrapp {
 		width: 100%;
@@ -15,7 +16,12 @@
 		margin-bottom: 16px;
 	}
 
-	h1 {
+	.hero-title {
+		font-size: 48px;
+		line-height: 1.25;
+		font-family: 'Quicksand', sans-serif;
+		font-weight: $fw-light;
+		color: $headings;
 		margin-bottom: 25px;
 
 		span {
