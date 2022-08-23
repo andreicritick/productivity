@@ -1,0 +1,33 @@
+.hero {
+	padding: 172px 0 212px;
+	background: $bg-hero;
+
+	&-text-wrapp {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	.subtext {
+		margin-bottom: 16px;
+	}
+
+	h1 {
+		margin-bottom: 28px;
+
+		span {
+			font-weight: $fw-bold;
+		}
+	}
+
+	p {
+		padding: 0 33%;
+		font-size: $fs-sm;
+		text-align: center;
+	}
+
+	&-img {}
+
+}

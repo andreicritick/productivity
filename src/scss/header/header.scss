@@ -11,9 +11,9 @@
 		padding ease-out $tr,
 		box-shadow ease-out $tr;
 
-		@media all and (min-width: $md) {
-			border-bottom: 3px solid #d9e4f8;
-		}
+	@media all and (min-width: $md) {
+		border-bottom: 3px solid #d9e4f8;
+	}
 
 	&.scrolled {
 		box-shadow: 0 10px 0 0 $bg-stat-light;

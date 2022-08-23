@@ -1,3 +1,4 @@
+// Header-buttons
 .header-button {
 	font-family: $ff-quick;
 	font-weight: $fw-bold;
@@ -174,4 +175,26 @@
         transform: rotate(45deg);
         transition: $tr;
     }
+}
+//hero-buttons
+.hero-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 52px;
+	height: 52px;
+	background: $white;
+	border-radius: 50%;
+	margin: 0 auto;
+	cursor: pointer;
+	transition: $tr;
+	box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+
+	img {
+		display: block;
+	}
+
+	&:hover {
+		scale: 1.1;
+	}
 }
