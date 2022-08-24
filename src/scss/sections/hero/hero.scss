@@ -35,3 +35,22 @@
 		text-align: center;
 	}
 }
+
+.swiper-pagination .swiper-pagination-bullet, .swiper-pagination-bullet-active {
+	width: 8px;
+	height: 8px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 116px;
+	left: 0;
+	width: 100%;
+}
+
+
+

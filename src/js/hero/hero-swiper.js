@@ -18,7 +18,7 @@ const swiperSlider = () => {
 
         pagination: {
             el: '.swiper-pagination',
-            clickable: true
+            clickable: true,
         }
     } )
 }
