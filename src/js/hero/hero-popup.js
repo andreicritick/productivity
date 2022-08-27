@@ -1,3 +1,6 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import  targetElement from '../common/global'
+
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
@@ -5,9 +8,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
 } )
 
 const togglePopup = () => {
-	const popup			= document.querySelector( '.hero-popup' )
-	const playButtons	= document.querySelectorAll( '.hero-button' )
-
+	const popup			 = document.querySelector( '.hero-popup' )
+	const playButtons	 = document.querySelectorAll( '.hero-button' )
 	if ( ! popup && playButtons.length ) return
 
 	const popupCloseButton = popup.querySelector( '.close-frame' )
@@ -26,10 +28,12 @@ const togglePopup = () => {
 			popupFrame.innerHTML = ''
 			popupFrame.appendChild( iframeClone )
 			popup.classList.add( 'opened' )
+			enableBodyScroll( targetElement )
 		} )
 	} )
 
 	popupCloseButton.addEventListener( 'click', () => {
 		popup.classList.remove( 'opened')
+		disableBodyScroll( targetElement )
 	} )
 }
