@@ -14,7 +14,6 @@ const swiperSlider = () => {
     const swiper = new Swiper('.swiper', {
         modules: [ Pagination ],
         slidesPerView: 1,
-        grabCursor: true,
 
         pagination: {
             el: '.swiper-pagination',

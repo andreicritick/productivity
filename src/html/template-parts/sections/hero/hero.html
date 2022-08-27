@@ -1,11 +1,23 @@
-<div class="swiper">
-	<div class="swiper-wrapper">
-		@@loop( "hero-swiper.html", [
-			{ "subtitle":"plan your life", "title": "Increase your <span>productivity</span>", "text": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.", "src": "img/hero/play.svg"},
-			{ "subtitle":"plan and manage", "title": "Save your <span>time</span>", "text": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.", "src": "img/hero/play.svg"},
-			{ "subtitle":"feature with us", "title": "Plan and <span>manage</span>", "text": "Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.", "src": "img/hero/play.svg"}
+<section class="hero">
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			@@loop( "slide.html", [
+			{ "iframe": "https://www.youtube.com/embed/_hHwz1UWJmI", "subtitle":"plan your life", "title": "Increase your <span>productivity</span>", "text": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.", "img": "../img/hero/bg1.png"},
+			{ "iframe": "https://www.youtube.com/embed/Ax5YFnzhZL0", "subtitle":"plan and manage", "title": "Save your <span>time</span>", "text": "Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.", "img": "../img/hero/bg2.png"},
+			{ "iframe": "https://www.youtube.com/embed/_hHwz1UWJmI", "subtitle":"feature with us", "title": "Plan and <span>manage</span>", "text": "Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.", "img": "../img/hero/bg3.png"},
+			{ "iframe": "https://www.youtube.com/embed/Ax5YFnzhZL0", "subtitle":"feature with us", "title": "Plan and <span>manage</span>", "text": "Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.", "img": "../img/hero/bg4.png"}
 		] )
+		</div>
 	</div>
-</div>
-<div class="swiper-pagination"></div>
+	<div class="swiper-pagination"></div>
+	<div class="hero-popup">
+		<div class="hero-popup-inner">
+			<div class="hero-popup-frame"></div>
+			<div class="close-frame">
+				Close
+			</div>
+		</div>
+	</div>
+</section>
+
 

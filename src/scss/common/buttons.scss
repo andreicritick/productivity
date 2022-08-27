@@ -177,6 +177,7 @@
 }
 //hero-buttons
 .hero-button {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -196,5 +197,28 @@
 
 	&:hover {
 		scale: 1.1;
+	}
+}
+
+//popupp-close-button
+.close-frame {
+	position: absolute;
+	top: 70px;
+	right: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	background: $text;
+	color: $white;
+	font-family: $ff-quick;
+	font-size: $fs-md;
+	border-radius: 10px;
+	padding: 5px 20px;
+	transition: $tr;
+	cursor: pointer;
+
+	&:hover {
+		opacity: $opacity;
 	}
 }
