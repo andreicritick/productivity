@@ -89,6 +89,10 @@
 					width: 30px;
 					height: 30px;
 				}
+
+				svg path {
+					stroke: black
+				}
 			}
 		}
 	}
@@ -193,10 +197,20 @@
 		@media all and (min-width: $xxl) {
 			align-items: center;
         }
+
+		a:hover {
+			svg path {
+				fill: #6188ff;
+			}
+		}
 	}
 
 	&-icon {
 		margin-right: 34px;
+
+		svg path {
+			fill: #757e9a;
+		}
 
 		&:last-child {
 			margin-right: 0;

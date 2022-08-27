@@ -54,7 +54,7 @@ h4, .h4 {
 
 a {
 	display: inline-block;
-	transition: color ease-out $tr;
+	transition: all ease-out $tr;
 	font-family: $ff-quick;
 	font-weight: $fw-medium;
 	font-size: 12px;
