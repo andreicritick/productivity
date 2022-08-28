@@ -1,10 +1,11 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import  targetElement from '../common/global'
+import { setTargetElement } from '../common/global'
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
 	togglePopup()
+	setTargetElement( 'body-scroll' )
 } )
 
 const togglePopup = () => {
@@ -28,12 +29,16 @@ const togglePopup = () => {
 			popupFrame.innerHTML = ''
 			popupFrame.appendChild( iframeClone )
 			popup.classList.add( 'opened' )
-			enableBodyScroll( targetElement )
+
+			if ( popup.classList.contains( 'opened' ) )
+				disableBodyScroll( setTargetElement() )
 		} )
 	} )
 
 	popupCloseButton.addEventListener( 'click', () => {
 		popup.classList.remove( 'opened')
-		disableBodyScroll( targetElement )
+
+		if ( ! popup.classList.contains( 'opened' ) )
+			enableBodyScroll( setTargetElement() )
 	} )
 }

@@ -25,6 +25,7 @@
 	width: 50px;
 	height: 30px;
 	cursor: pointer;
+	z-index: 100;
 
 	@media all and (min-width: $md) {
 		display: none;
