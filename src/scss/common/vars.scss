@@ -8,9 +8,10 @@ $xl	: 1200px;
 $xxl: 1400px;
 
 // Container max-width.
-$container-md: 800px;
-$container-lg: 1030px;
-$container-xl: 1240px;
+$container-md : 800px;
+$container-lg : 1030px;
+$container-b  : 1080px;
+$container-xl : 1240px;
 $container-xxl: 1480px;
 
 // Container padding.
@@ -68,6 +69,7 @@ $button-bg-orange : #FFD7D7;
 $orange           : #D43F3F;
 $blue             : #3A79FF;
 $button-text      : #ADB4D2;
+$plan             : #4c85ff;
 
 //letter-spacing
 $ls01            :  0.01em;

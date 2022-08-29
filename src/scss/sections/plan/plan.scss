@@ -1,0 +1,56 @@
+.plan {
+	padding: 170px 0;
+	background: $bg;
+
+	&-wrapp {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.subtitle {
+		text-align: left;
+	}
+
+	h2 {
+		text-align: left;
+		margin-bottom: 27px;
+	}
+
+	&-text-wrapp {
+		width: 41%;
+		padding: 0 10%;
+	}
+
+	&-text {
+		margin-bottom: 47px;
+	}
+
+	&-button-wrapp {
+		width: 100%;
+		max-width: 260px;
+		border: 1px solid $button-text;
+		display: flex;
+		align-items: center;
+	}
+
+	&-button-text {
+		font-family: $ff-quick;
+		font-weight: $fw-medium;
+		font-size: $fs-s;
+		line-height: 1.2;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: $button-text;
+		margin: 0 auto;
+	}
+
+	&-image {
+		width: 59%;
+
+		img {
+			width: 100%;
+		}
+	}
+}
