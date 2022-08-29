@@ -1,0 +1,19 @@
+.brands {
+    padding: 100px 0 50px;
+
+
+    &-wrapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand {
+        margin-right: 77px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
