@@ -70,7 +70,7 @@
 	border-radius: 50px;
 	border: 0;
 	background-color: $bg-input;
-	color: darkgray;
+	color: $text;
 	cursor: pointer;
 
 	@media all and (min-width: $sm) {
