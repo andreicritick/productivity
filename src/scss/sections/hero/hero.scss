@@ -46,13 +46,14 @@
 	}
 
 	p {
-		padding: 10px;
+		padding: 0 5%;
 		font-size: $fs-s;
 		text-align: center;
 		margin-bottom: 28px;
 
 		@media all and (min-width: $sm) {
 			font-size: $fs-sm;
+			padding: 0 10%;
 		}
 
 		@media all and (min-width: $lg) {
@@ -147,6 +148,14 @@
 
 .swiper-slide {
 	width: 100%;
-	min-height: 570px;
-	padding: 91px 0;
+	min-height: 470px;
+	padding: 70px 0;
+
+	@media all and (min-width: $md) {
+		min-height: 570px;
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 91px 0;
+	}
 }

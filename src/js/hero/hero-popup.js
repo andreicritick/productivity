@@ -1,5 +1,5 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import { setTargetElement } from '../common/global'
+import { setTargetElement, getTargetElement } from '../common/global'
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
@@ -32,7 +32,7 @@ const togglePopup = () => {
 			popup.classList.add( 'opened' )
 
 			if ( popup.classList.contains( 'opened' ) )
-				disableBodyScroll( setTargetElement() )
+				disableBodyScroll( getTargetElement() )
 		} )
 	} )
 
@@ -40,6 +40,6 @@ const togglePopup = () => {
 		popup.classList.remove( 'opened')
 
 		if ( ! popup.classList.contains( 'opened' ) )
-			enableBodyScroll( setTargetElement() )
+			enableBodyScroll( getTargetElement() )
 	} )
 }
