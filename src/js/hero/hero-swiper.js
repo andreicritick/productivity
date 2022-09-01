@@ -11,7 +11,7 @@ const swiperSlider = () => {
 
     if ( ! heroItems ) return
 
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper-hero', {
         modules: [ Pagination ],
         slidesPerView: 1,
 

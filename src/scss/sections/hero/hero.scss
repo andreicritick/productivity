@@ -50,7 +50,6 @@
 		text-align: center;
 		margin-bottom: 19px;
 		color: $plan-text;
-		padding: 0 10px;
 
 		@media all and (min-width: $sm) {
 			font-size: $fs-sm;
@@ -114,7 +113,7 @@
 	}
 }
 //swiper
-.pagination-hero .swiper-pagination-bullet,
+.swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
 	width: 8px;
 	height: 8px;
@@ -138,7 +137,7 @@
 	}
 }
 
-.swiper-hero {
+.hero-slide {
 	width: 100%;
 	min-height: 470px;
 	padding: 70px 0;
