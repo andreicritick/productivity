@@ -33,7 +33,7 @@
 
     svg path {
         fill: #d6dae5;
-        transition: fill ease-out 0.35s;
+        transition: fill ease-out $tr;
     }
 
     @media all and (min-width: $sm) {
