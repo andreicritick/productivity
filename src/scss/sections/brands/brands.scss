@@ -17,9 +17,15 @@
         margin-bottom: 20px;
         padding: 0 28px;
 
-        img {
-            max-width: auto;
-            height: auto;
+        a:hover {
+			svg path {
+				fill: #6188ff;
+                opacity: 1;
+			}
+        }
+
+        svg path {
+            fill: #d6dae5;
         }
 
         @media all and (min-width: $sm) {
@@ -32,4 +38,3 @@
         }
     }
 }
-
