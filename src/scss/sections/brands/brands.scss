@@ -8,6 +8,11 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        padding-top: 20px;
+
+        @media all and (min-width: $md) {
+            padding-top: 0;
+        }
     }
 
     .brand {
