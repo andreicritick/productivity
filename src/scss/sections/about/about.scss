@@ -1,0 +1,59 @@
+.about {
+    padding: 141px 0 171px;
+
+    &-wrapp {
+        background-image: url( '../img/about/clouds.png') center no-repeat;
+    }
+
+    .h3-wrapp {
+		margin-bottom: 92px;
+	}
+
+    &-items {
+        display: flex;
+		margin: 0 20px;
+    }
+
+    &-item {
+		width: calc( 100% / 4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		padding: 0 20px;
+    }
+
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $about-bg;
+        width: 69px;
+        height: 69px;
+        border-radius: 50%;
+		margin-bottom: 33px;
+    }
+
+    &-title {
+        font-family: $ff-os;
+        font-weight: $fw-bold;
+        font-size: $fs-ss;
+        line-height: 1.8;
+        text-align: center;
+        color: $subhead;
+		margin-bottom: 25px;
+    }
+
+    &-text {
+		width: 100%;
+		max-width: 140px;
+		min-height: 102px;
+		font-family: $ff-os;
+		font-weight: $fw-semibold;
+		font-size: $fs-11;
+		line-height: 1.7;
+		text-align: center;
+		color: #ADB3CB;
+        text-align: center;
+    }
+}
