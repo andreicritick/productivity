@@ -53,7 +53,25 @@
 		font-size: $fs-11;
 		line-height: 1.7;
 		text-align: center;
-		color: #ADB3CB;
+		color: $ab-text;
         text-align: center;
     }
+
+	&-buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.header-button {
+			margin-left: 0;
+		}
+
+		span {
+			font-family: $ff-os;
+			font-weight: $fw-semibold;
+			font-size: $fs-11;
+			line-height: 1.7;
+			color: $ab-text;
+		}
+	}
 }

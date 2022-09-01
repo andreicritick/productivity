@@ -13,6 +13,11 @@
 	color: $blue;
 	cursor: pointer;
 
+	&.rm {
+		background: $button-bg-orange;
+		color: $orange;
+	}
+
 	&:hover {
 		opacity: $opacity;
 	}
