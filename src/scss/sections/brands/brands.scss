@@ -14,32 +14,33 @@
             padding-top: 0;
         }
     }
+}
 
-    .brand {
-        display: flex;
-        justify-content: center;
-        width: calc( 100% / 2);
-        margin-bottom: 20px;
-        padding: 0 28px;
+.brand {
+    display: flex;
+    justify-content: center;
+    width: calc( 100% / 2);
+    margin-bottom: 20px;
+    padding: 0 28px;
 
         a:hover {
-			svg path {
-				fill: #6188ff;
+            svg path {
+                transition: $tr;
+                fill: #6188ff;
                 opacity: 1;
-			}
+            }
         }
 
-        svg path {
-            fill: #d6dae5;
-        }
+    svg path {
+        fill: #d6dae5;
+    }
 
-        @media all and (min-width: $sm) {
-            width: calc( 100% / 3 );
-        }
+    @media all and (min-width: $sm) {
+        width: calc( 100% / 3 );
+    }
 
-        @media all and (min-width: $md) {
-            width: calc( 100% / 5 );
-            margin-bottom: 0;
-        }
+    @media all and (min-width: $md) {
+        width: calc( 100% / 5 );
+        margin-bottom: 0;
     }
 }
