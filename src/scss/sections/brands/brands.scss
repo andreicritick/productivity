@@ -27,13 +27,13 @@
             opacity: 1;
 
             svg path {
-                transition: $tr;
                 fill: #6188ff;
             }
         }
 
     svg path {
         fill: #d6dae5;
+        transition: fill ease-out 0.35s;
     }
 
     @media all and (min-width: $sm) {
