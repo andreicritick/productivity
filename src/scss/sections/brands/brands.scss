@@ -24,10 +24,11 @@
     padding: 0 28px;
 
         a:hover {
+            opacity: 1;
+
             svg path {
                 transition: $tr;
                 fill: #6188ff;
-                opacity: 1;
             }
         }
 
