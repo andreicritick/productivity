@@ -11,31 +11,29 @@
 		padding ease-out $tr,
 		box-shadow ease-out $tr;
 
-		@media all and (min-width: $md) {
-			border-bottom: 3px solid #d9e4f8;
-		}
+	@media all and (min-width: $md) {
+		border-bottom: 1px solid #d8e3fe;
+	}
 
 	&.scrolled {
 		box-shadow: 0 10px 0 0 $bg-stat-light;
-		padding: 12px 0 12px;
+		padding: 32px 0 12px;
 	}
 
-	&-wrapp {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-
-		@media all and (min-width: $lg) {
-			justify-content: space-between;
-        }
-
-		&.opened {
-			width: 100%;
-			min-height: 100vh;
+	&.opened {
+		.header-wrapp {
 			padding-top: 50px;
 			display: flex;
 			justify-content: space-evenly;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 			overflow-y: auto;
+			overflow-x: hidden;
+			padding: 20px;
+			background: $bg-stat-light;
 
 			@media all and (min-width: $md) {
 				display: none;
@@ -81,7 +79,6 @@
 				justify-content: center;
 				width: 100%;
 				margin-left: 0;
-				margin-bottom: 100px;
 			}
 
 			.header-icon {
@@ -91,6 +88,47 @@
 				}
 			}
 		}
+
+		.burger-button {
+			height: 50px;
+
+			span {
+				position: absolute;
+				top: 20px;
+				right: 0;
+				width: 100%;
+				height: 6px;
+				background: $bg-stat-dark;
+				border-radius: 10px;
+				transform: rotate(-45deg);
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0px;
+					right: 0;
+					width: 100%;
+					height: 6px;
+					background: $bg-stat-dark;
+					border-radius: 10px;
+					transform: rotate(90deg);
+				}
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&-wrapp {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media all and (min-width: $lg) {
+			justify-content: space-between;
+        }
 	}
 
 	&-inner-left {
@@ -132,7 +170,7 @@
 		display: none;
 
 		@media all and (min-width: $md) {
-			width: 100%; //
+			width: 100%;
 			display: flex;
 			justify-content: space-between;
         }
@@ -193,10 +231,21 @@
 		@media all and (min-width: $xxl) {
 			align-items: center;
         }
+
+		a:hover {
+			svg path {
+				fill: #6188ff;
+			}
+		}
 	}
 
 	&-icon {
 		margin-right: 34px;
+
+		svg path {
+			fill: #757e9a;
+			transition: ease $tr;
+		}
 
 		&:last-child {
 			margin-right: 0;

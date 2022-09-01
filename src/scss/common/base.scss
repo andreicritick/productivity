@@ -32,6 +32,10 @@ ul {
 	list-style: none
 }
 
+p {
+	margin: 0;
+}
+
 .wrapper {
 	position: relative;
 	display: flex;
@@ -40,7 +44,23 @@ ul {
 	min-height: 100vh;
 	overflow: hidden;
 
+	@media all and (min-width: $sm) {
+		padding-top: 31px;
+	}
+
+	@media all and (min-width: $md) {
+		padding-top: 61px;
+	}
+
+	@media all and (min-width: $xxl) {
+		padding-top: 81px;
+	}
+
 	.footer {
 		margin-top: auto
 	}
+}
+
+picture {
+	display: block;
 }

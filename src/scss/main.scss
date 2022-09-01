@@ -1,3 +1,6 @@
+//npm^s
+@import '../../node_modules/swiper/swiper-bundle.min';
+
 // Defaults styles.
 @import 'common/fonts';
 @import 'common/vars';
@@ -12,10 +15,12 @@
 @import 'footer/footer';
 
 // Home page sections styles.
-@import 'sections/home/hero';
+@import 'sections/hero/hero';
 
 //Buttons
 @import 'common/buttons';
 
 //Forms
 @import 'form/header-form.scss';
+
+

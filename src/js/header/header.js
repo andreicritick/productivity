@@ -1,7 +1,10 @@
+import  { renderSVGs } from '../common/global'
+
 document.addEventListener( 'DOMContentLoaded', () => {
     'use strict'
 
     window.addEventListener('scroll', headerScroll )
+    renderSVGs( document.querySelector( '.header-icons' ) )
 })
 
 const headerScroll = () => {

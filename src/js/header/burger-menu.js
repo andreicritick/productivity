@@ -1,5 +1,5 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import { WINDOW_WIDTH_MD } from '../common/global'
+import { setTargetElement, getTargetElement, WINDOW_WIDTH_MD } from '../common/global'
 
 document.addEventListener( 'DOMContentLoaded', () => {
     'use strict'
@@ -8,33 +8,27 @@ document.addEventListener( 'DOMContentLoaded', () => {
 } )
 
 const toggleBurgerMenu = () => {
-    const burgerMenu   = document.querySelector( '.header-wrapp' )
-    const burgerButton = document.querySelector( '.burger-button' )
-    const targetElement = document.querySelector( '#bodyLock' )
+    const burgerMenu    = document.querySelector( '.header' )
+    const burgerButton  = document.querySelector( '.burger-button' )
 
-        if ( ! burgerButton && ! burgerMenu && targetElement ) return
+        if ( ! burgerButton && ! burgerMenu ) return
 
         burgerButton.addEventListener( 'click', () => {
+            setTargetElement( 'body-lock' )
+
             if ( ! burgerMenu.classList.contains( 'opened') ) {
                 burgerMenu.classList.add( 'opened')
-                disableBodyScroll( targetElement )
+                disableBodyScroll( getTargetElement() )
             }    else {
                 burgerMenu.classList.remove( 'opened')
-                enableBodyScroll( targetElement )
-            }
-            if ( ! burgerButton.classList.contains( 'opened') ) {
-                burgerButton.classList.add( 'opened' )
-            }   else {
-                burgerButton.classList.remove( 'opened' )
+                enableBodyScroll( getTargetElement() )
             }
         } )
 
     window.addEventListener( 'resize', () => {
         const windowWidth = window.innerWidth
-
-        if( windowWidth >= WINDOW_WIDTH_MD )
+        if ( windowWidth >= WINDOW_WIDTH_MD )
             burgerMenu.classList.remove( 'opened' )
-            burgerButton.classList.remove ( 'opened' )
     } )
 }
 

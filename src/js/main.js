@@ -6,3 +6,7 @@ import './header/burger-menu'
 
 //forms
 import './form/header-form'
+
+//hero
+import './hero/hero-swiper'
+import './hero/hero-popup'
