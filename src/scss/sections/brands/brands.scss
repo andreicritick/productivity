@@ -1,15 +1,13 @@
 .brands {
-    padding: 200px 0; //62 0
-
+    margin: 0 -28px;
+    border: 1px solid #d8e3fe;
 
     &-wrapp {
-        width: 100%;
-        max-width: 888px;
+        min-height: 144px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
     }
 
     .brand {
@@ -17,6 +15,12 @@
         justify-content: center;
         width: calc( 100% / 2);
         margin-bottom: 20px;
+        padding: 0 28px;
+
+        img {
+            max-width: auto;
+            height: auto;
+        }
 
         @media all and (min-width: $sm) {
             width: calc( 100% / 3 );
