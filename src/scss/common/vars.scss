@@ -3,16 +3,17 @@ $xs	: 375px;
 $sm	: 480px;
 $m  : 576px;
 $md	: 768px;
+$xm	: 888px;
 $lg	: 992px;
 $xl	: 1200px;
 $xxl: 1400px;
 
 // Container max-width.
-$container-md : 800px;
-$container-lg : 1030px;
-$container-b  : 1080px;
-$container-xl : 1240px;
-$container-xxl: 1480px;
+$container-md   : 800px;
+$container-xm    : 928px;
+$container-lg   : 1030px;
+$container-xl   : 1240px;
+$container-xxl  : 1480px;
 
 // Container padding.
 $container-padding: 20px;
