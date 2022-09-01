@@ -36,14 +36,14 @@ h1, .h1 {
 
 	h2, .h2 {
 		font-family: $ff-quick;
-		font-weight: $fw-medium;
+		font-weight: $fw-regular;
 		font-size: 36px;
 		line-height: 1.25;
 		color: $headings;
 		text-align: center;
 
 		span {
-			font-weight: $fw-bold;
+			font-weight: $fw-medium;
 		}
 
 		@media all and (min-width: $lg) {

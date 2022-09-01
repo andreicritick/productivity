@@ -2,10 +2,16 @@
 	padding: 170px 0;
 	background: $bg;
 
+	.wrapp {
+		padding-left: 22%;
+	}
+
 	&-wrapp {
+		width: 100%;
+		max-width: 1121px;
 		display: flex;
 		flex-wrap: wrap;
-		padding: 0 48px 0 271px;
+		align-items: center;
 	}
 
 	.subtitle {
@@ -18,12 +24,14 @@
 	}
 
 	&-text-wrapp {
-		width: 30%;
-		padding-top: 140px;
+		width: 100%;
+		max-width: 413px;
+		margin-right: 25px;
 	}
 
 	p {
 		margin-bottom: 47px;
+		padding-right: 15px;
 	}
 
 	&-button-wrapp {
@@ -47,10 +55,6 @@
 	}
 
 	&-image {
-		width: 70%;
-
-		img {
-			width: 100%;
-		}
+		width: calc( 100% - 468px );
 	}
 }
