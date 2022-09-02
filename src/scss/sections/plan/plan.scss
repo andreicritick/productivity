@@ -4,10 +4,11 @@
 
 	&-wrapp {
 		width: 100%;
-		max-width: 1121px;
+		max-width: 413px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		padding-top: 4.2%;
 	}
 
 	.subtitle {
@@ -16,18 +17,20 @@
 
 	h2 {
 		text-align: left;
-		margin-bottom: 27px;
+		margin-bottom: 23px;
 	}
 
-	&-text-wrapp {
-		width: 100%;
-		max-width: 413px;
-		margin-right: 25px;
+	&-text {
+		font-family: $ff-roboto;
+		font-weight: $fw-regular;
+		font-size: $fs-sm;
+		line-height: 1.9;
+		letter-spacing: 0.03em;
+		color: $plan-text;
 	}
 
 	p {
-		margin-bottom: 47px;
-		padding-right: 15px;
+		margin-bottom: 59px;
 	}
 
 	&-button-wrapp {
@@ -48,5 +51,13 @@
 		text-align: center;
 		color: $button-text;
 		margin: 0 auto;
+	}
+
+	&-image {
+		width: 80%;
+		position: relative;
+		top: 0;
+		right: 0;
+		transform: translate( 60%, -76%);
 	}
 }
