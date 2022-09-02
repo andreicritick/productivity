@@ -2,10 +2,6 @@
 	padding: 170px 0;
 	background: $bg;
 
-	.wrapp {
-		padding-left: 22%;
-	}
-
 	&-wrapp {
 		width: 100%;
 		max-width: 1121px;
@@ -52,9 +48,5 @@
 		text-align: center;
 		color: $button-text;
 		margin: 0 auto;
-	}
-
-	&-image {
-		width: calc( 100% - 468px );
 	}
 }
