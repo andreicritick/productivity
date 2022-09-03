@@ -108,6 +108,15 @@
 	&-image-wrapp {
 		width: 100%;
 
+		picture {
+			display: flex;
+			justify-content: center;
+
+			@media all and (min-width: $lg) {
+				display: block;
+			}
+		}
+
 		@media all and (min-width: $lg) {
 			width: 60%;
 		}
@@ -120,6 +129,10 @@
 	&-image {
 		width: 100%;
 		max-width: none;
+
+		@media all and (min-width: $md) {
+			width: 80%;
+		}
 
 		@media all and (min-width: $lg) {
 			width: 100%;
