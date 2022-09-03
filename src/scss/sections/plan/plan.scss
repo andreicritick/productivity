@@ -107,6 +107,7 @@
 
 	&-image-wrapp {
 		width: 100%;
+		text-align: center;
 
 		@media all and (min-width: $lg) {
 			width: 60%;
@@ -120,8 +121,6 @@
 	&-image {
 		width: 100%;
 		max-width: none;
-		display: block;
-		margin: 0 auto;
 
 		@media all and (min-width: $md) {
 			width: 80%;
