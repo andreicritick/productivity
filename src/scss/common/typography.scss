@@ -21,14 +21,33 @@ h1, .h1 {
 	}
 }
 
-h2, .h2 {
-	font-family: $ff-quick;
-	font-weight: $fw-medium;
-	font-size: 36px;
-	line-height: 1.25;
-	color: $headings;
+.h2-wrapp {
+	.subtitle {
+		font-family: $ff-roboto;
+		font-weight: $fw-medium;
+		font-size: 10px;
+		line-height: 1.2;
+		letter-spacing: $ls01;
+		text-transform: uppercase;
+		color: $headings;
+		margin-bottom: 27px;
+		text-align: center
+	}
 
-	@media all and (min-width: $lg) {
+	h2, .h2 {
+		font-family: $ff-quick;
+		font-weight: $fw-regular;
+		font-size: 36px;
+		line-height: 1.25;
+		color: $headings;
+		text-align: center;
+
+		span {
+			font-weight: $fw-medium;
+		}
+
+		@media all and (min-width: $lg) {
+		}
 	}
 }
 

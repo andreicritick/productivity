@@ -16,32 +16,15 @@
 		max-width: $container-xl
 	}
 
+	&.xm {
+		@media all and (min-width: $xm) {
+			max-width: $container-xm
+		}
+	}
+
 	&-fluid {
 		width: 100%;
 		max-width: 100%;
 		padding: 0 $container-padding
-	}
-}
-
-.container.xl {
-	width: 100%;
-	max-width: 100%;
-	padding: 0 $container-padding;
-	margin: 0 auto;
-
-	@media all and (min-width: $md) {
-		max-width: $container-md
-	}
-
-	@media all and (min-width: $lg) {
-		max-width: $container-lg
-	}
-
-	@media all and (min-width: $xl) {
-		max-width: $container-xl
-	}
-
-	@media all and (min-width: $xxl) {
-		max-width: $container-xxl
 	}
 }

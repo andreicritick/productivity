@@ -3,15 +3,17 @@ $xs	: 375px;
 $sm	: 480px;
 $m  : 576px;
 $md	: 768px;
+$xm	: 888px;
 $lg	: 992px;
 $xl	: 1200px;
 $xxl: 1400px;
 
 // Container max-width.
-$container-md: 800px;
-$container-lg: 1030px;
-$container-xl: 1240px;
-$container-xxl: 1480px;
+$container-md   : 800px;
+$container-xm    : 928px;
+$container-lg   : 1030px;
+$container-xl   : 1240px;
+$container-xxl  : 1480px;
 
 // Container padding.
 $container-padding: 20px;
@@ -71,10 +73,11 @@ $button-bg-orange : #FFD7D7;
 $orange           : #D43F3F;
 $blue             : #3A79FF;
 $button-text      : #ADB4D2;
+$plan             : #4c85ff;
 $about-bg         : #F1F5FF;
 
 //letter-spacing
-$ls01            :  0.01em;
+$ls01            :  0.1em;
 $ls03            :  0.03em;
 $ls05            :  0.05em;
 

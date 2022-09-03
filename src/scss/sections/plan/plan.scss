@@ -1,0 +1,142 @@
+.plan {
+	padding: 50px 0 30px;
+	background: $bg;
+	border-bottom: 1px solid #d8e3fe;
+
+	@media all and (min-width: $md) {
+		padding: 90px 0 30px;
+	}
+
+	@media all and (min-width: $xxl) {
+		padding: 170px 0 96px;
+	}
+
+	&-wrapp {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&-info {
+		width: 100%;
+		margin-bottom: 40px;
+
+		@media all and (min-width: $lg) {
+			width: 40%;
+			margin-bottom: 0;
+			padding-top: 4.4%;
+		}
+
+		@media all and (min-width: $xl) {
+			width: 49%;
+		}
+	}
+
+	.subtitle {
+		text-align: center;
+
+		@media all and (min-width: $lg) {
+			text-align: left;
+		}
+	}
+
+	h2 {
+		text-align: center;
+		margin-bottom: 23px;
+
+		@media all and (min-width: $lg) {
+			text-align: left;
+		}
+	}
+
+	&-text {
+		max-width: 100%;
+		font-family: $ff-roboto;
+		font-weight: $fw-regular;
+		font-size: $fs-s;
+		line-height: 1.9;
+		letter-spacing: 0.03em;
+		color: $plan-text;
+		text-align: center;
+		margin: 0 auto;
+
+		@media all and (min-width: $lg) {
+			font-size: $fs-sm;
+			max-width: 413px;
+			margin: 0;
+			text-align: left;
+		}
+	}
+
+	p {
+		margin-bottom: 20px;
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 40px;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 59px;
+		}
+	}
+
+	&-button-wrapp {
+		width: 100%;
+		max-width: 260px;
+		border: 1px solid $button-text;
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+
+		@media all and (min-width: $lg) {
+			margin: 0;
+		}
+	}
+
+	&-button-text {
+		font-family: $ff-quick;
+		font-weight: $fw-medium;
+		font-size: $fs-s;
+		line-height: 1.2;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: $button-text;
+		margin: 0 auto;
+	}
+
+	&-image-wrapp {
+		width: 100%;
+		text-align: center;
+
+		@media all and (min-width: $lg) {
+			width: 60%;
+		}
+
+		@media all and (min-width: $xl) {
+			width: 51%;
+		}
+	}
+
+	&-image {
+		width: 100%;
+		max-width: none;
+
+		@media all and (min-width: $md) {
+			width: 80%;
+		}
+
+		@media all and (min-width: $lg) {
+			width: 100%;
+			margin: 0;
+		}
+
+		@media all and (min-width: $xl) {
+			width: 130%;
+		}
+
+		@media all and (min-width: $xxl) {
+			width: 154%;
+		}
+	}
+}
