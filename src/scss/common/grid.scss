@@ -16,6 +16,12 @@
 		max-width: $container-xl
 	}
 
+	&.xs {
+		@media all and (min-width: $xm) {
+			max-width: $container-xs
+		}
+	}
+
 	&.xm {
 		@media all and (min-width: $xm) {
 			max-width: $container-xm
