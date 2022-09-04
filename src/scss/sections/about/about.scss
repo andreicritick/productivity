@@ -12,11 +12,7 @@
 	&-wrapp {
 		background-image: url( '../img/about/clouds.png') no-repeat;
 		background-position: center;
-		background-size: 100% 50%;
-
-		@media all and (min-width: $md) {
-			background-size: 100% auto;
-		}
+		background-size: 100% auto;
 	}
 
 	.h3-wrapp {
