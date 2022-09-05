@@ -31,7 +31,6 @@
 	&-items {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
 		margin: 0 -20px;
 
 		@media all and (min-width: $lg) {
@@ -41,49 +40,53 @@
 
 	&-item {
 		position: relative;
-		width: calc( 100% / 2);
+		width: calc( 100% / 1);
 		padding: 0 20px;
 		margin-bottom: 30px;
 
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: -13px;
-			width: 28px;
-			height: 1px;
-			background: #DAE4FE;
-		}
-
-		&:nth-child( 2n + 1 )::after {
-			display: none;
-		}
-
-		@media all and (min-width: $md) {
-			&:nth-child( 2n + 1 )::after {
-				display: block;
-			}
-
-			&:nth-child( 4n + 1 )::after {
-				display: none;
-			}
-		}
-
-		&:nth-child( 2n + 1 ):nth-last-child( -n + 2 ),
-		&:nth-child( 2n + 1 ):nth-last-child( -n + 2 ) ~ & {
+		&:last-child {
 			margin-bottom: 0;
 		}
 
-		@media all and (min-width: $md) {
-			&:nth-child( 4n + 1 ):nth-last-child( -n + 4 ),
-			&:nth-child( 4n + 1 ):nth-last-child( -n + 4 ) ~ & {
+		@media all and (min-width: $sm) {
+			width: calc( 100% / 2 );
+
+			&::after {
+				content: "";
+				display: none;
+				position: absolute;
+				top: 50%;
+				left: -13px;
+				width: 28px;
+				height: 1px;
+				background: #DAE4FE;
+			}
+
+			&:nth-child( 2n + 1 ):nth-last-child( -n + 2 ),
+			&:nth-child( 2n + 1 ):nth-last-child( -n + 2 ) ~ .about-item {
 				margin-bottom: 0;
+			}
+
+			&:nth-child( 2n )::after {
+				display: block;
 			}
 		}
 
 		@media all and (min-width: $md) {
 			width: calc( 100% / 4 );
+
+			&::after {
+				display: block;
+			}
+
+			&:nth-child( 4n + 1 ):nth-last-child( -n + 4 ),
+			&:nth-child( 4n + 1 ):nth-last-child( -n + 4 ) ~ .about-item {
+				margin-bottom: 0;
+			}
+
+			&:first-child::after {
+				display: none;
+			}
 		}
 
 		@media all and (min-width: $lg) {
