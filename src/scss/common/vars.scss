@@ -9,8 +9,9 @@ $xl	: 1200px;
 $xxl: 1400px;
 
 // Container max-width.
+$container-xs   : 761px;
 $container-md   : 800px;
-$container-xm    : 928px;
+$container-xm   : 928px;
 $container-lg   : 1030px;
 $container-xl   : 1240px;
 $container-xxl  : 1480px;
@@ -25,8 +26,10 @@ $ff-os	    : 'Open Sans', sans-serif;
 
 // Font sizes.
 $fs-xxs	: 10px;
+$fs-11	: 11px;
 $fs-xs	: 12px;
 $fs-s	: 13px;
+$fs-ss	: 14px;
 $fs-sm	: 15px;
 $fs-md	: 18px;
 $fs-lg	: 24px;
@@ -64,6 +67,7 @@ $subtext   : #DFE2EF;
 $item      : #697CA6;
 $stat-text : #5E80FF;
 $plan-text : #8D96BD;
+$ab-text   : #ADB3CB;
 //buttons
 $button-bg-blue   : #D2E1FF;
 $button-bg-orange : #FFD7D7;
@@ -71,6 +75,7 @@ $orange           : #D43F3F;
 $blue             : #3A79FF;
 $button-text      : #ADB4D2;
 $plan             : #4c85ff;
+$about-bg         : #F1F5FF;
 
 //letter-spacing
 $ls01            :  0.1em;

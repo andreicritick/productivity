@@ -14,6 +14,11 @@
 	cursor: pointer;
 	transition: opacity ease-in-out $tr;
 
+	&.rm {
+		background: $button-bg-orange;
+		color: $orange;
+	}
+
 	&:hover {
 		opacity: $opacity;
 	}

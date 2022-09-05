@@ -51,12 +51,27 @@ h1, .h1 {
 	}
 }
 
-h3, .h3 {
-	font-family: $ff-quick;
-	font-weight: $fw-medium;
-	font-size: 24px;
-	line-height: 1.25;
-	color: $headings
+.h3-wrapp {
+	.subtitle {
+		font-family: $ff-roboto;
+		font-weight: $fw-medium;
+		font-size: 10px;
+		line-height: 1.2;
+		letter-spacing: $ls01;
+		text-transform: uppercase;
+		color: $headings;
+		margin-bottom: 27px;
+		text-align: center
+	}
+
+	h3, .h3 {
+		font-family: $ff-quick;
+		font-weight: $fw-medium;
+		font-size: 24px;
+		line-height: 1.25;
+		color: $headings;
+		text-align: center
+	}
 }
 
 h4, .h4 {
