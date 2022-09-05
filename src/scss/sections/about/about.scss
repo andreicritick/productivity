@@ -1,0 +1,218 @@
+.about {
+	padding: 60px 0 73px;
+
+	@media all and (min-width: $md) {
+		padding: 100px 0 100px;
+	}
+
+	@media all and (min-width: $md) {
+		padding: 140px 0 172px;
+	}
+
+	&-wrapp {
+		background-image: url( '../img/about/clouds.png') no-repeat;
+		background-position: center;
+		background-size: 100% auto;
+	}
+
+	.h3-wrapp {
+		margin-bottom: 42px;
+		padding-top: 30px;
+
+		@media all and (min-width: $xl) {
+			margin-bottom: 92px;
+		}
+	}
+
+	.subtitle {
+		margin-bottom: 20px;
+	}
+
+	&-items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+
+		@media all and (min-width: $lg) {
+			margin: 0 -33.5px;
+		}
+	}
+
+	&-item {
+		position: relative;
+		width: calc( 100% / 1);
+		padding: 0 20px;
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media all and (min-width: $sm) {
+			width: calc( 100% / 2 );
+
+			&::after {
+				content: "";
+				display: none;
+				position: absolute;
+				top: 50%;
+				left: -13px;
+				width: 28px;
+				height: 1px;
+				background: #DAE4FE;
+			}
+
+			&:nth-child( 2n + 1 ):nth-last-child( -n + 2 ),
+			&:nth-child( 2n + 1 ):nth-last-child( -n + 2 ) ~ .about-item {
+				margin-bottom: 0;
+			}
+
+			&:nth-child( 2n )::after {
+				display: block;
+			}
+		}
+
+		@media all and (min-width: $md) {
+			width: calc( 100% / 4 );
+
+			&::after {
+				display: block;
+			}
+
+			&:nth-child( 4n + 1 ):nth-last-child( -n + 4 ),
+			&:nth-child( 4n + 1 ):nth-last-child( -n + 4 ) ~ .about-item {
+				margin-bottom: 0;
+			}
+
+			&:first-child::after {
+				display: none;
+			}
+		}
+
+		@media all and (min-width: $lg) {
+			padding: 0 33.5px;
+		}
+	}
+
+	&-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&-inner-top {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 25px;
+	}
+
+	&-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $about-bg;
+		width: 69px;
+		height: 69px;
+		border-radius: 50%;
+		margin-bottom: 33px;
+
+		img {
+			display: block;
+		}
+	}
+
+	&-title {
+		font-family: $ff-os;
+		font-weight: $fw-bold;
+		font-size: $fs-ss;
+		line-height: 1.8;
+		text-align: center;
+		color: $subhead;
+	}
+
+	&-text {
+		width: 100%;
+		min-height: 102px;
+		font-family: $ff-os;
+		font-weight: $fw-semibold;
+		font-size: $fs-11;
+		line-height: 1.7;
+		text-align: center;
+		color: $ab-text;
+		text-align: center;
+	}
+
+	&-buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 12px;
+
+		@media all and (min-width: $md) {
+			margin-top: 30px;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-top: 40px;
+		}
+
+		@media all and (min-width: $xl) {
+			margin-top: 92px;
+		}
+
+		.header-button, .header-button.rm {
+			margin-left: 0;
+			width: 113px;
+			height: 43px;
+
+			@media all and (min-width: $md) {
+				display: block;
+			}
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			font-family: $ff-os;
+			font-weight: $fw-semibold;
+			font-size: $fs-11;
+			line-height: 1.7;
+			color: $ab-text;
+			margin: 0 16px;
+
+			@media all and (min-width: $md) {
+				margin: 0 32px;
+			}
+
+			&::before, &::after {
+				content: "";
+				display: block;
+				width: 8px;
+				height: 2px;
+				background: #DAE4FE;
+
+				@media all and (min-width: $md) {
+					width: 15px;
+				}
+			}
+
+			&::before {
+				transform: translateX( -5px );
+
+				@media all and (min-width: $md) {
+					transform: translateX( -15px );
+				}
+			}
+
+			&::after {
+				transform: translateX( 5px );
+
+				@media all and (min-width: $md) {
+					transform: translateX( 15px );
+				}
+			}
+		}
+	}
+}
