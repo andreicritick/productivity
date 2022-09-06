@@ -138,8 +138,7 @@
 		@media all and (min-width: $md) {
 			display: flex;
 			justify-content: center;
-			width: 100%;
-			margin-bottom: 20px;
+			width: 50%;
         }
 
 		@media all and (min-width: $lg) {
@@ -151,8 +150,12 @@
 	}
 
 	&-link {
-		margin-right: 75px;
+		margin-right: 20px;
 		transition: ease $tr;
+
+		@media all and (min-width: $lg) {
+			margin-right: 75px;
+        }
 	}
 
 	&-logo {
@@ -162,7 +165,7 @@
 		background: $accent;
 		border-radius: 50%;
 
-		@media all and (min-width: $lg) {
+		@media all and (min-width: $md) {
 			display: block;
         }
 	}
@@ -207,23 +210,24 @@
 		align-items: center;
 
 		@media all and (min-width: $md) {
-			width: 100%;
+			width: 50%;
 			display: flex;
-			flex-wrap: wrap	;
-			justify-content: space-evenly;
+			justify-content: space-between;
+			padding-left: 7%;
         }
 
 		@media all and (min-width: $lg) {
 			width: auto;
 			justify-content: flex-start	;
 			flex-wrap: nowrap;
+			padding-left: 0;
 		}
 	}
 
 	&-icons {
-		width: 100%;
 		display: flex;
 		justify-content: space-evenly;
+		align-items: center;
 
 		@media all and (min-width: $lg) {
 			justify-content: center;
@@ -258,17 +262,12 @@
 	}
 
 	&-button {
-		margin-left: 46px;
-
-		@media all and (min-width: $md) {
-			display: none;
-        }
+		display: block;
+		white-space: nowrap;
 
 		@media all and (min-width: $lg) {
-			display: block;
-			width: auto;
-			white-space: nowrap;
-		}
+			margin-left: 46px;
+        }
 	}
 
 	.burger-menu {
