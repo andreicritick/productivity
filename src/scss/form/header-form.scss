@@ -10,9 +10,10 @@
     z-index: 100;
     overflow-y: auto;
     padding: 20px;
-    background: $button-bg-orange;
+    background: #697ca6b6;
 
     .form {
+        position: relative;
         width: 100%;
         max-width: 1000px;
         display: flex;
@@ -20,11 +21,6 @@
         align-items: center;
         justify-content: center;
         padding: 10px;
-        width: 280px;
-        height:370px;
-        position:relative;
-        top: 0;
-        right: 0;
         margin: auto 0;
         border-radius: 20px;
 
@@ -49,6 +45,7 @@ legend {
     margin: 0 auto 20px auto;
     font-family: $ff-quick;
     font-size: $fs-lg;
+    color: $white;
 
     @media all and (min-width: $md) {
         font-size: $fs-xl;
@@ -67,6 +64,11 @@ input {
     border-radius: 10px;
     transition: $tr;
     background-color: $bg-input;
+    color: $item;
+
+    &::placeholder {
+        opacity: 1;
+    }
 
     @media all and (min-width: $sm) {
         max-width: 350px;
@@ -90,12 +92,15 @@ input {
 
 .date {
     height: 40px;
+    font-family: $ff-quick;
+    color: $item;
 }
 
 .for-date {
     font-family: $ff-quick;
     font-size: $fs-md;
     margin-bottom: 10px;
+    color: $white;
 
     @media all and (min-width: $md) {
         font-size: $fs-lg;
@@ -112,8 +117,13 @@ textarea {
     margin-bottom: 20px;
     border: 0;
     border-radius: 10px;
+    color: $item;
     transition: $tr;
     background-color: $bg-input;
+
+    &::placeholder {
+        opacity: 1;
+    }
 
     @media all and (min-width: $sm) {
         width: 350px;

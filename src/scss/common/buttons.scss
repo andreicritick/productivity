@@ -91,11 +91,15 @@
 
 .close-form {
     position: absolute;
-    top: 0;
+    top: 56px;
     right: 0;
     width: 30px;
     height: 30px;
     cursor: pointer;
+
+	@media all and (min-width: $md) {
+		top: 66px;
+	}
 
     span {
         position: absolute;
@@ -104,29 +108,10 @@
         background-image: none;
         width: 30px;
         height: 30px;
-
-		@media all and (min-width: $sm) {
-			right: -37px;
-		}
-
-		@media all and (min-width: $md) {
-			top: -50px;
-			right: -105px;
-		}
-
-		@media all and (min-width: $lg) {
-			top: -80px;
-			right: -210px;
-		}
-
-		@media all and (min-width: $xl) {
-			top: -145px;
-			right: -310px;
-		}
     }
 
     span:hover::before, span:hover::after {
-        background: red;
+        background: $button-bg-blue;
     }
 
     span::before {
