@@ -18,33 +18,29 @@
 			<div class="container">
 				<div class="burger-menu"></div>
 				<div class="header-wrapp" id="body-lock">
+					<a class="header-link" href="/">
+						<div class="header-logo"></div>
+					</a>
 					<div class="burger-button">
 						<span></span>
 					</div>
-					<div class="header-inner-left">
-						<a class="header-link" href="/">
-							<div class="header-logo"></div>
-						</a>
-						<div class="header-menu">
-							@@loop( "header-item.html", [
-									{ "name": "home", "href": "/" }, { "name": "blog", "href": "/" }, { "name": "features", "href": "/" },
-									{ "name": "pricing", "href": "/" }, { "name": "documentation", "href": "/" }
-								] )
-						</div>
+					<div class="header-menu">
+						@@loop( "header-item.html", [
+								{ "name": "home", "href": "/" }, { "name": "blog", "href": "/" }, { "name": "features", "href": "/" },
+								{ "name": "pricing", "href": "/" }, { "name": "documentation", "href": "/" }
+							] )
 					</div>
-					<div class="header-inner-right">
-						<div class="header-icons">
-							@@loop( "header-icon.html", [
-									{ "img": "img/header/facebook-logo.svg", "href": "https://www.facebook.com/" },
-									{ "img": "img/header/telegram-logo.svg", "href": "https://telegram.org/" },
-									{ "img": "img/header/twit-logo.svg", "href": "https://investor.twitterinc.com/" },
-									{ "img": "img/header/m-logo.svg", "href": "https://mail.ru/" }
-								] )
-						</div>
-						<button class="header-button">
-							Get started
-						</button>
+					<div class="header-icons">
+						@@loop( "header-icon.html", [
+								{ "img": "img/header/facebook-logo.svg", "href": "https://www.facebook.com/" },
+								{ "img": "img/header/telegram-logo.svg", "href": "https://telegram.org/" },
+								{ "img": "img/header/twit-logo.svg", "href": "https://investor.twitterinc.com/" },
+								{ "img": "img/header/m-logo.svg", "href": "https://mail.ru/" }
+							] )
 					</div>
+					<button class="header-button">
+						Get started
+					</button>
 				</div>
 			</div>
 		</header>
