@@ -13,3 +13,6 @@ import './hero/hero-popup'
 
 //brands
 import './brands/brands'
+
+//stats
+import './stats/numbers'
