@@ -1,0 +1,46 @@
+.stats {
+
+	&-wrapp {
+		display: flex;
+	}
+
+	&-wrapp-left {
+		background: $bg-stat-dark;
+		width: 50%;
+	}
+
+	&-wrapp-right {
+		background: $bg-stat-light;
+		width: 50%;
+	}
+
+	&-inner-left, &-inner-right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		color: $white;
+	}
+
+	&-inner-right {
+		align-items: flex-start;
+		color: $stat-text;
+	}
+
+	&-inner-img {}
+
+	&-inner-num {
+		font-family: $ff-quick;
+		font-weight: $fw-regular;
+		font-size: $fs-xxl;
+		line-height: 1.7;
+		letter-spacing: $ls03;
+	}
+
+	&-inner-text {
+		font-family: $ff-quick;
+		font-weight: $fw-medium;
+		font-size: $fs-md;
+		line-height: 1.3;
+		letter-spacing: $ls03;
+	}
+}
