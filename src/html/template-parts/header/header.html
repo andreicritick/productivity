@@ -16,24 +16,18 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				<div class="burger-menu">
-					<div class="burger-button">
-						<span></span>
-					</div>
-				</div>
-				<div class="header-wrapp" id="body-lock">
-					<div class="header-inner-left">
-						<a class="header-link" href="/">
-							<div class="header-logo"></div>
-						</a>
-						<div class="header-menu">
+				<div class="header-wrapp">
+					<a class="header-link" href="/">
+						<div class="header-logo"></div>
+					</a>
+
+					<div id="body-lock" class="header-menu-wrapper">
+						<nav class="header-menu">
 							@@loop( "header-item.html", [
 									{ "name": "home", "href": "/" }, { "name": "blog", "href": "/" }, { "name": "features", "href": "/" },
 									{ "name": "pricing", "href": "/" }, { "name": "documentation", "href": "/" }
 								] )
-						</div>
-					</div>
-					<div class="header-inner-right">
+						</nav>
 						<div class="header-icons">
 							@@loop( "header-icon.html", [
 									{ "img": "img/header/facebook-logo.svg", "href": "https://www.facebook.com/" },
@@ -45,6 +39,10 @@
 						<button class="header-button">
 							Get started
 						</button>
+					</div><!-- .header-menu-wrapper -->
+
+					<div class="burger-button">
+						<span></span>
 					</div>
 				</div>
 			</div>
