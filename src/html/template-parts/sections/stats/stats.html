@@ -1,5 +1,8 @@
 <div class="stats">
 	<div class="stats-wrapp">
-		@@include( 'stats-inner.html')
+		@@loop( 'item.html', [
+			{ "is_alt": "" ,"img": "img/productivity/productivity.svg", "num": "89", "sign": "%", "text": "Customers who have increased their productivity" },
+			{ "is_alt": " alt" ,"img": "img/productivity/users.svg", "num": "3123", "sign": "", "text": "Users who have used our application" }
+		] )
 	</div>
 </div>
