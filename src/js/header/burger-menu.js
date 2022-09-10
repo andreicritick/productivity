@@ -11,24 +11,27 @@ const toggleBurgerMenu = () => {
     const burgerMenu    = document.querySelector( '.header' )
     const burgerButton  = document.querySelector( '.burger-button' )
 
-        if ( ! burgerButton && ! burgerMenu ) return
+    if ( ! burgerButton && ! burgerMenu ) return
 
-        burgerButton.addEventListener( 'click', () => {
-            setTargetElement( 'body-lock' )
+    burgerButton.addEventListener( 'click', () => {
+        setTargetElement( 'body-lock' )
 
-            if ( ! burgerMenu.classList.contains( 'opened') ) {
-                burgerMenu.classList.add( 'opened')
-                disableBodyScroll( getTargetElement() )
-            }    else {
-                burgerMenu.classList.remove( 'opened')
-                enableBodyScroll( getTargetElement() )
-            }
-        } )
+        if ( ! burgerMenu.classList.contains( 'opened') ) {
+            burgerMenu.classList.add( 'opened')
+            disableBodyScroll( getTargetElement() )
+        }    else {
+            burgerMenu.classList.remove( 'opened')
+            enableBodyScroll( getTargetElement() )
+        }
+    } )
 
     window.addEventListener( 'resize', () => {
         const windowWidth = window.innerWidth
-        if ( windowWidth >= WINDOW_WIDTH_MD )
-            burgerMenu.classList.remove( 'opened' )
+
+        if ( windowWidth >= WINDOW_WIDTH_MD && burgerMenu.classList.contains('opened') ) {
+            burgerMenu.classList.remove('opened')
+            enableBodyScroll( getTargetElement() )
+        }
     } )
 }
 
