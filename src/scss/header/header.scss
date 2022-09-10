@@ -25,10 +25,9 @@
 			display: none;
 		}
 
-		.header-wrapp {
-			padding-top: 50px;
+		.header-menu-wrapper {
 			display: flex;
-			justify-content: center;
+			flex-direction: column;
 			align-items: center;
 			position: fixed;
 			top: 0;
@@ -40,47 +39,55 @@
 			background: $bg-stat-light;
 
 			@media all and (min-width: $md) {
-				display: none;
+				position: relative;
+				top: auto;
+				left: auto;
+				width: auto;
+				height: auto;
+				padding: 0;
+				overflow-y: visible;
+				background-color: transparent;
+				flex-direction: row
 			}
+		}
 
-			.header-menu {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				padding-top: 50px;
+		.header-menu {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 50px;
+		}
+
+		.header-item {
+			margin-right: 0;
+			margin-bottom: 30px;
+
+			&-link {
+				font-size: $fs-lg;
 			}
+		}
 
-			.header-item {
-				margin-right: 0;
-				margin-bottom: 30px;
+		.header-icons {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			margin-bottom: 50px;
+		}
 
-				&-link {
-					font-size: $fs-lg;
-				}
-			}
+		.header-button {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin-left: 0;
+			background: $headings;
+			color: $white;
+			border-radius: 20px;
+		}
 
-			.header-icons {
-				width: 100%;
-				display: flex;
-				justify-content: space-evenly;
-				margin-bottom: 50px;
-			}
-
-			.header-button {
-				display: flex;
-				justify-content: center;
-				width: 100%;
-				margin-left: 0;
-				background: $headings;
-				color: $white;
-				border-radius: 20px;
-			}
-
-			.header-icon {
-				img {
-					width: 30px;
-					height: 30px;
-				}
+		.header-icon {
+			img {
+				width: 30px;
+				height: 30px;
 			}
 		}
 
@@ -125,8 +132,12 @@
 	&-link {
 		transition: ease $tr;
 
+		@media all and (min-width: $md) {
+			margin-right: 30px
+		}
+
 		@media all and (min-width: $lg) {
-			margin-right: 73px;
+			margin-right: 73px
 		}
 	}
 
@@ -144,8 +155,6 @@
 	}
 
 	&-menu {
-		display: none;
-
 		@media all and (min-width: $md) {
 			display: flex;
 			margin-right: 3%;
@@ -158,6 +167,17 @@
 		@media all and (min-width: $xl) {
 			margin-right: 30%;
         }
+
+		&-wrapper {
+			display: none;
+
+			@media all and (min-width: $md) {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				flex-grow: 1
+			}
+		}
 	}
 
 	&-item {
@@ -192,6 +212,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			margin-left: auto
 		}
 
 		a:hover {
@@ -216,7 +237,7 @@
 	}
 
 	&-button {
-		@media all and (min-width: $xl) {
+		@media all and (min-width: $md) {
 			margin-left: 44px;
 		}
 	}
