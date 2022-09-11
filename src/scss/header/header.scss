@@ -145,12 +145,16 @@
 		display: block;
 		width: 20px;
 		height: 20px;
-		background: $accent;
-		border-radius: 50%;
+		transition: ease $tr;
+
+		&:hover {
+			opacity: $opacity;
+		}
 
 		@media all and (min-width: $md) {
 			width: 26px;
 			height: 26px;
+			margin-right: 73px;
         }
 	}
 
