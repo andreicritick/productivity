@@ -28,6 +28,12 @@
 		}
 	}
 
+	&.big {
+		@media all and (min-width: $big) {
+			max-width: $container-big
+		}
+	}
+
 	&-fluid {
 		width: 100%;
 		max-width: 100%;

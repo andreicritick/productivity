@@ -1,0 +1,75 @@
+.blog {
+    padding: 104px 0 213px;
+	background: $bg;
+
+	.h3-wrapp {
+		margin-bottom: 92px;
+	}
+
+	.swiper-blog {
+		display: flex;
+	}
+
+	.blog-slide {
+		display: flex;
+		padding: 64px 41px 64px 39px;
+		margin-bottom: 101px;
+		background: $white;
+		border: 1px solid #D8E3FE;
+		box-shadow: 0px 15px 50px #EFF4FF;
+	}
+
+	&-gallery {
+		display: flex;
+		width: 50%;
+		margin-right: 67px;
+	}
+
+	&-info {
+		width: 50%;
+	}
+
+	&-title {
+		font-family: $ff-quick;
+		font-weight: $fw-regular;
+		font-size: $fs-xl;
+		line-height: 1.25;
+		color: $headings;
+		margin-bottom: 32px;
+	}
+
+	&-text {
+		font-family: $ff-roboto;
+		font-weight: $fw-regular;
+		font-size: $fs-ss;
+		line-height: 1.9;
+		letter-spacing: $ls03;
+		color: $plan-text;
+		margin-bottom: 31px;
+	}
+
+	&-buttons {
+		display: flex;
+		align-items: center;
+	}
+
+	.header-button {
+		margin: 0 23px 0 0;
+	}
+
+	&-link {
+		font-family: $ff-quick;
+		font-weight: $fw-bold;
+		font-size: $fs-s;
+		line-height: 1.2;
+		color: $button-text;
+	}
+
+	.swiper-pagination.blog {
+		position: relative;
+		padding: 0;
+	}
+}
+
+
+
