@@ -1,26 +1,32 @@
 <section class="blog">
-    <div class="container big">
-        <div class="h3-wrapp">
-            <div class="subtitle">
-                OUR RESOURCES
-            </div>
-            <h3>
-                Start reading our blog
-            </h3>
-        </div>
-        <div class="swiper swiper-blog">
-            <div class="swiper-wrapper">
-                @@loop( 'blog-slide.html', [
-                    { "img1": "img/resources/b1.jpg", "img2": "img/resources/b2.jpg", "img3": "img/resources/b3.jpg", "title": "How to start planning", "text": "  Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ..."},
-                    { "img1": "img/resources/b4.jpg", "img2": "img/resources/b5.jpg", "img3": "img/resources/b6.jpg", "title": "How to start work", "text": "  Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ..."},
-                    { "img1": "img/resources/b7.jpg", "img2": "img/resources/b8.jpg", "img3": "img/resources/b9.jpg", "title": "How to starded now", "text": "  Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ..."}
-                ] )
-            </div>
-        </div>
-        <div class="blog-navigation">
-            <img class="blog-navigation-arrow-left" src="img/resources/arrow.svg" width="23" height="15" alt="">
-            <img class="blog-navigation-arrow-right" src="img/resources/arrow.svg" width="23" height="15" alt="">
-        </div>
-        <div class="swiper-pagination blog"></div>
-    </div>
+	<div class="container nav">
+		<div class="container big">
+			<div class="h3-wrapp">
+				<div class="subtitle">
+					OUR RESOURCES
+				</div>
+				<h3>
+					Start reading our blog
+				</h3>
+			</div>
+			<div class="swiper swiper-blog">
+				<div class="swiper-wrapper">
+					@@loop( 'blog-slide.html', [
+						{ "img1": "img/resources/b1.jpg", "img2": "img/resources/b2.jpg", "img3": "img/resources/b3.jpg", "title": "How to start planning", "text": "  Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ..."},
+						{ "img1": "img/resources/b4.jpg", "img2": "img/resources/b5.jpg", "img3": "img/resources/b6.jpg", "title": "How to start work", "text": "  Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota 	verti periculis vis ei, quas tibique pro at, eos ut decore ..."},
+						{ "img1": "img/resources/b7.jpg", "img2": "img/resources/b8.jpg", "img3": "img/resources/b9.jpg", "title": "How to starded now", "text": "  Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ..."}
+					] )
+				</div>
+			</div>
+			<div class="swiper-pagination blog"></div>
+		</div>
+		<div class="blog-navigation">
+			<button class="blog-navigation-arrow-left"">
+				<img src="img/resources/arrow.svg" width="25" height="17" alt="">
+			</button>
+			<button class="blog-navigation-arrow-right">
+				<img src="img/resources/arrow.svg" width="25" height="17" alt="">
+			</button>
+		</div>
+	</div>
 </section>

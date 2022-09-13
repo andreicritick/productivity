@@ -1,7 +1,10 @@
 .blog {
     padding: 104px 0 73px;
 	background: $bg;
-	position: relative;
+
+	.container.nav {
+		position: relative;
+	}
 
 	.h3-wrapp {
 		margin-bottom: 92px;
@@ -84,7 +87,6 @@
 		transition: ease 0.5s;
 	}
 
-
 	&-info {
 		width: 50%;
 	}
@@ -135,9 +137,17 @@
 
 	&-navigation-arrow-right, &-navigation-arrow-left {
 		position: absolute;
-		top: 51.5%;
+		top: 50%;
 		right: 0;
 		cursor: pointer;
+		transition: ease $tr;
+		background: none;
+		border: 0;
+
+
+		&:hover {
+			opacity: $opacity;
+		}
 	}
 
 	&-navigation-arrow-left {

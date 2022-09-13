@@ -34,6 +34,12 @@
 		}
 	}
 
+	&.nav {
+		@media all and (min-width: $nav) {
+			max-width: $container-nav
+		}
+	}
+
 	&-fluid {
 		width: 100%;
 		max-width: 100%;
