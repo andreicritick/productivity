@@ -12,12 +12,17 @@ const blogSlider = () => {
     if ( ! blog ) return
 
     const swiper = new Swiper('.swiper-blog', {
-        modules: [ Pagination ],
+        modules: [ Pagination, Navigation ],
         slidesPerView: 1,
 
         pagination: {
             el: '.swiper-pagination.blog',
             clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.blog-navigation-arrow-right',
+            prevEl: '.blog-navigation-arrow-left',
         }
     } )
 }

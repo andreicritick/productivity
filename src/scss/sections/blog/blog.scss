@@ -1,9 +1,14 @@
 .blog {
-    padding: 104px 0 213px;
+    padding: 104px 0 73px;
 	background: $bg;
+	position: relative;
 
 	.h3-wrapp {
 		margin-bottom: 92px;
+	}
+
+	.subtitle {
+		margin-bottom: 18px;
 	}
 
 	.swiper-blog {
@@ -13,7 +18,7 @@
 	.blog-slide {
 		display: flex;
 		padding: 64px 41px 64px 39px;
-		margin-bottom: 101px;
+		margin-bottom: 109px;
 		background: $white;
 		border: 1px solid #D8E3FE;
 		box-shadow: 0px 15px 50px #EFF4FF;
@@ -21,9 +26,64 @@
 
 	&-gallery {
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
 		width: 50%;
 		margin-right: 67px;
+		max-height: 267px;
 	}
+
+	.gallery-item {
+		width: 267px;
+		height: 267px;
+		position: relative;
+		margin-right: 13px;
+
+		&:nth-child( n + 2 ) {
+			width: 126px;
+			height: 126px;
+			margin-right: 0;
+			margin-bottom: 13px;
+
+			.gallery-loup {
+				width: 35px;
+				height: 35px;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.gallery-item {
+		&:hover {
+			.gallery-loup {
+				opacity: 1;
+			}
+		}
+	}
+
+	.gallery-img {
+		display: flex;
+		object-fit: cover;
+		height: 100%;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	.gallery-loup {
+		width: 65px;
+		height: 65px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		opacity: 0;
+		transition: ease 0.5s;
+	}
+
 
 	&-info {
 		width: 50%;
@@ -35,7 +95,7 @@
 		font-size: $fs-xl;
 		line-height: 1.25;
 		color: $headings;
-		margin-bottom: 32px;
+		margin-bottom: 27px;
 	}
 
 	&-text {
@@ -45,7 +105,7 @@
 		line-height: 1.9;
 		letter-spacing: $ls03;
 		color: $plan-text;
-		margin-bottom: 31px;
+		margin-bottom: 45px;
 	}
 
 	&-buttons {
@@ -54,7 +114,8 @@
 	}
 
 	.header-button {
-		margin: 0 23px 0 0;
+		margin: 0 41px 0 0;
+		width: 113px;
 	}
 
 	&-link {
@@ -63,11 +124,29 @@
 		font-size: $fs-s;
 		line-height: 1.2;
 		color: $button-text;
+		text-transform: none;
+		letter-spacing: 0;
 	}
 
 	.swiper-pagination.blog {
 		position: relative;
 		padding: 0;
+	}
+
+	&-navigation-arrow-right, &-navigation-arrow-left {
+		position: absolute;
+		top: 51.5%;
+		right: 0;
+		cursor: pointer;
+	}
+
+	&-navigation-arrow-left {
+		left: 0;
+		transform: rotate( 180deg );
+	}
+
+	.swiper-pagination.blog {
+		position: relative;
 	}
 }
 

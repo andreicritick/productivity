@@ -1,9 +1,11 @@
 <div class="swiper-slide blog-slide">
     <div class="blog-gallery">
-        <img src="@@img1" width="1024" height="768" alt="">
-        <img src="@@img2" width="1024" height="768" alt="">
-        <img src="@@img3" width="1024" height="768" alt="">
-    </div>
+    @@loop( 'gallery-item.html', [
+        { "src": "@@img1" },
+        { "src": "@@img2" },
+        { "src": "@@img3" }
+    ] )
+</div>
     <div class="blog-info">
         <div class="blog-title">
             @@title
