@@ -1,13 +1,24 @@
 .blog {
-    padding: 104px 0 73px;
+    padding: 50px 0; //104 0 73
 	background: $bg;
+
+	@media all and (min-width: $sm) {
+	}
 
 	.container.nav {
 		position: relative;
 	}
 
+	.container.big {
+		padding: 0;
+
+		@media all and (min-width: $m) {
+			padding: 0 20px;
+		}
+	}
+
 	.h3-wrapp {
-		margin-bottom: 92px;
+		margin-bottom: 30px; //mb92
 	}
 
 	.subtitle {
@@ -20,8 +31,9 @@
 
 	.blog-slide {
 		display: flex;
-		padding: 64px 41px 64px 39px;
-		margin-bottom: 109px;
+		flex-direction: column; //row
+		padding: 10px; // 64 41 64 39
+		margin-bottom: 40px; //109
 		background: $white;
 		border: 1px solid #D8E3FE;
 		box-shadow: 0px 15px 50px #EFF4FF;
@@ -29,25 +41,25 @@
 
 	&-gallery {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row; //col
 		justify-content: center;
 		flex-wrap: wrap;
-		width: 50%;
-		margin-right: 67px;
-		max-height: 267px;
+		width: 100%; //50
+		margin-bottom: 20px; //67r
+		max-height: 100%; //267
 	}
 
 	.gallery-item {
-		width: 267px;
-		height: 267px;
+		width: 100%; //267
+		height: 100%; //200px
 		position: relative;
-		margin-right: 13px;
+		margin: 0 0 20px 0; //13r
 
 		&:nth-child( n + 2 ) {
-			width: 126px;
+			width: calc( 50% - 10px); //126
 			height: 126px;
-			margin-right: 0;
-			margin-bottom: 13px;
+			margin-right: 10px;
+			margin-bottom: 0; //13
 
 			.gallery-loup {
 				width: 35px;
@@ -56,7 +68,7 @@
 		}
 
 		&:last-child {
-			margin-bottom: 0;
+			margin: 0; //mb 0
 		}
 	}
 
@@ -89,36 +101,41 @@
 	}
 
 	&-info {
-		width: 50%;
+		width: 100%; //50
 	}
 
 	&-title {
 		font-family: $ff-quick;
 		font-weight: $fw-regular;
-		font-size: $fs-xl;
+		font-size: $fs-lg; //xl
 		line-height: 1.25;
 		color: $headings;
-		margin-bottom: 27px;
+		margin-bottom: 10px; //27
+		text-align: center; //l
 	}
 
 	&-text {
 		font-family: $ff-roboto;
 		font-weight: $fw-regular;
-		font-size: $fs-ss;
+		font-size: $fs-s; //ss
 		line-height: 1.9;
 		letter-spacing: $ls03;
 		color: $plan-text;
-		margin-bottom: 45px;
+		margin-bottom: 20px; //45
+		text-align: center; //l
 	}
 
 	&-buttons {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 	}
 
 	.header-button {
-		margin: 0 41px 0 0;
-		width: 113px;
+		display: block;
+		margin: 0 20px 0 0; // 0 41 0 0
+		width: 113px; //113
+		white-space: nowrap; //
 	}
 
 	&-link {
@@ -129,6 +146,7 @@
 		color: $button-text;
 		text-transform: none;
 		letter-spacing: 0;
+		text-align: center; //
 	}
 
 	.swiper-pagination.blog {
@@ -137,6 +155,7 @@
 	}
 
 	&-navigation-arrow-right, &-navigation-arrow-left {
+		display: none;
 		position: absolute;
 		top: 50%;
 		right: 0;
