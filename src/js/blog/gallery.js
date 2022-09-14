@@ -27,6 +27,22 @@ const createModal = imageSource => {
     const modalImage = document.createElement( 'img' );
     modalImage.setAttribute( 'src', imageSource );
     modal.append( modalImage )
+
+    const galleryButtons = document.createElement( 'div' )
+    galleryButtons.setAttribute( 'class', 'gallery-buttons' )
+    document.querySelector( '.modal' ).append( galleryButtons )
+
+    const prevButton = document.createElement( 'button' )
+    prevButton.setAttribute( 'class', 'prev-button')
+    prevButton.innerHTML = 'Prev'
+    document.querySelector( '.gallery-buttons' ).append( prevButton )
+    console.log ( prevButton )
+
+    const nextButton = document.createElement( 'button' )
+    nextButton.setAttribute( 'class', 'next-button')
+    nextButton.innerHTML = 'Next'
+    document.querySelector( '.gallery-buttons' ).append( nextButton )
+    console.log ( nextButton )
 }
 
 const createImagesArr = currentImage => {
@@ -48,8 +64,4 @@ const createImagesArr = currentImage => {
             isActive: isActive
         } )
     } )
-
-    console.log( images )
 }
-
-
