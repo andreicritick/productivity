@@ -22,27 +22,22 @@ const galleryPopup = () => {
 const createModal = imageSource => {
     const modal = document.createElement( 'div' )
     modal.setAttribute( 'class', 'modal' )
+    modal.id = 'modal'
+
+    modal.innerHTML = `<div class="modal-inner">
+        <img class="modal-image" src="${ imageSource }">
+        <nav class="gallery-buttons">
+            <button class="modal-button prev-button">Prev</button>
+            <button class="modal-button next-button">Next</button>
+        </nav>
+    </div>`
     document.querySelector( '.blog' ).append( modal )
 
-    const modalImage = document.createElement( 'img' );
-    modalImage.setAttribute( 'src', imageSource );
-    modal.append( modalImage )
+    modal.addEventListener( 'click', e => {
+        e.stopPropagation()
 
-    const galleryButtons = document.createElement( 'div' )
-    galleryButtons.setAttribute( 'class', 'gallery-buttons' )
-    document.querySelector( '.modal' ).append( galleryButtons )
-
-    const prevButton = document.createElement( 'button' )
-    prevButton.setAttribute( 'class', 'prev-button')
-    prevButton.innerHTML = 'Prev'
-    document.querySelector( '.gallery-buttons' ).append( prevButton )
-    console.log ( prevButton )
-
-    const nextButton = document.createElement( 'button' )
-    nextButton.setAttribute( 'class', 'next-button')
-    nextButton.innerHTML = 'Next'
-    document.querySelector( '.gallery-buttons' ).append( nextButton )
-    console.log ( nextButton )
+        if ( e.target.className === 'modal' ) modal.remove()
+    } )
 }
 
 const createImagesArr = currentImage => {

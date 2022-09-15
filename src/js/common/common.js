@@ -6,7 +6,7 @@ export const isInScope = ( elementSelector, st, offset = 0 ) => {
 	if ( ! element) return
 	let bodyRect  = document.body.getBoundingClientRect(),
 		elemRect  = element.getBoundingClientRect(),
-		elemTop    = elemRect.top - bodyRect.top
+		elemTop   = elemRect.top - bodyRect.top
 
 	if( ! element ) return
 
