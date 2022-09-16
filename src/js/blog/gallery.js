@@ -1,3 +1,6 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import { setTargetElement, getTargetElement } from '../common/global'
+
 document.addEventListener( 'DOMContentLoaded', () => {
     'use strict'
 
@@ -22,8 +25,7 @@ const galleryPopup = () => {
 const createModal = imageSource => {
     const modal = document.createElement( 'div' )
     modal.setAttribute( 'class', 'modal' )
-    modal.id = 'modal'
-
+    modal.id = 'modal-lock'
     modal.innerHTML = `<div class="modal-inner">
         <img class="modal-image" src="${ imageSource }">
         <nav class="gallery-buttons">
@@ -32,12 +34,27 @@ const createModal = imageSource => {
         </nav>
     </div>`
     document.querySelector( '.blog' ).append( modal )
+    setTargetElement( 'modal-lock' )
+    disableBodyScroll( getTargetElement() )
 
     modal.addEventListener( 'click', e => {
         e.stopPropagation()
 
+        enableBodyScroll( getTargetElement() )
         if ( e.target.className === 'modal' ) modal.remove()
     } )
+
+        // const prev = document.querySelector('.modal-button.prev-button')
+        // const next = document.querySelector('.modal-button.next-button')
+
+        // prev.addEventListener( 'click', () => {
+        //     console.log( images)
+        //     if (  )
+        // } )
+
+        // next.addEventListener( 'click', ( ) => {
+        //     console.log( 'pidor2')
+        // } )
 }
 
 const createImagesArr = currentImage => {
@@ -60,3 +77,6 @@ const createImagesArr = currentImage => {
         } )
     } )
 }
+
+
+
