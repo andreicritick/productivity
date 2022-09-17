@@ -8,6 +8,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 } )
 
 const images = []
+let currentImageIndex
 
 const galleryPopup = () => {
     const galleryImages = document.querySelectorAll( '.gallery-img' )
@@ -40,21 +41,35 @@ const createModal = imageSource => {
     modal.addEventListener( 'click', e => {
         e.stopPropagation()
 
-        enableBodyScroll( getTargetElement() )
-        if ( e.target.className === 'modal' ) modal.remove()
+        if ( e.target.className === 'modal' ) {
+            enableBodyScroll( getTargetElement() )
+            modal.remove()
+        }
     } )
 
-        // const prev = document.querySelector('.modal-button.prev-button')
-        // const next = document.querySelector('.modal-button.next-button')
+        const prev = document.querySelector('.modal-button.prev-button')
+        const next = document.querySelector('.modal-button.next-button')
 
-        // prev.addEventListener( 'click', () => {
-        //     console.log( images)
-        //     if (  )
-        // } )
+        prev.addEventListener( 'click', () => {
+            images[ currentImageIndex ].isActive = 0
 
-        // next.addEventListener( 'click', ( ) => {
-        //     console.log( 'pidor2')
-        // } )
+            if ( currentImageIndex === 0 ) currentImageIndex = images.length -1
+            else currentImageIndex --
+
+            images[ currentImageIndex ].isActive = 1
+
+            document.querySelector( '.modal-image' ).src = images[ currentImageIndex ].src
+        } )
+
+        next.addEventListener( 'click', ( ) => {
+            images[ currentImageIndex ].isActive = 0
+
+            if ( currentImageIndex === images.length -1 ) currentImageIndex = 0
+            else currentImageIndex ++
+
+            images[ currentImageIndex ].isActive = 1
+            document.querySelector( '.modal-image' ).src = images[ currentImageIndex ].src
+        } )
 }
 
 const createImagesArr = currentImage => {
@@ -66,10 +81,13 @@ const createImagesArr = currentImage => {
 
     if ( ! galleryImages.length ) return
 
-    galleryImages.forEach( img => {
+    galleryImages.forEach( (img, index) => {
         let isActive = 0
 
-        if ( img.src === currentImage.src ) isActive = 1
+        if ( img.src === currentImage.src ) {
+            isActive = 1
+            currentImageIndex = index
+        }
 
         images.push( {
             src: img.src,

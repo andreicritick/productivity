@@ -156,6 +156,7 @@
 		opacity: 0;
 		transition: ease 0.5s;
 		cursor: pointer;
+		pointer-events: none;
 	}
 
 	&-info {
