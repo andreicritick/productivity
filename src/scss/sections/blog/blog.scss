@@ -75,7 +75,7 @@
 		}
 
 		@media all and (min-width: $m) {
-			width: 50%;
+			width: 407px;
 			margin: 0 20px 0 0;
 		}
 
@@ -84,6 +84,10 @@
 			margin: 0 67px 0 0;
 			justify-content: flex-start;
 			max-height: 267px;
+		}
+
+		@media all and (min-width: $xxl) {
+			width: 50%;
 		}
 	}
 
@@ -94,7 +98,7 @@
 		margin: 0 0 10px 0;
 
 		&:nth-child( n + 2 ) {
-			width: calc( 50% - 10px);
+			width: calc( 50% - 5px);
 			height: auto;
 			margin: 0 10px 0 0;
 
@@ -110,7 +114,7 @@
 
 		@media all and (min-width: $sm) {
 			width: 100%;
-			height: 200px;
+			height: 267px;
 		}
 
 		@media all and (min-width: $lg) {
@@ -221,8 +225,13 @@
 
 	&-buttons {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		@media all and (min-width: $sm) {
+			flex-direction: row;
+		}
 
 		@media all and (min-width: $lg) {
 			justify-content: flex-start;;
@@ -231,11 +240,11 @@
 
 	.header-button {
 		display: block;
-		margin: 0 20px 0 0;
+		margin: 0 0 20px 0;
 		width: 113px;
 		white-space: nowrap;
 
-		@media all and (min-width: $m) {
+		@media all and (min-width: $sm) {
 			margin: 0 20px 0 0;
 		}
 
