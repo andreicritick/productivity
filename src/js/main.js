@@ -16,3 +16,7 @@ import './brands/brands'
 
 //stats
 import './stats/numbers'
+
+//blog
+import './blog/blog'
+import './blog/gallery'
