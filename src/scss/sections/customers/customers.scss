@@ -135,6 +135,10 @@
 		letter-spacing: $ls03;
 		color: $text;
 		text-align: center;
+
+		@media all and (min-width: $md) {
+			text-align: left;
+		}
 	}
 
 	.swiper-slide-prev {
