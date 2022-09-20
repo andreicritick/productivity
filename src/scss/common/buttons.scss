@@ -249,3 +249,26 @@
 		margin-left: 6px;
 	}
 }
+
+//dropdown button
+.dropdown-button {
+	width: 193px;
+	height: 43px;
+	font-family: $ff-quick;
+	font-weight: $fw-medium;
+	font-size: $fs-s;
+	line-height: 1.2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #7382A3;
+	border: 0;
+	background: #E8ECF4;
+	border-radius: 2px;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $opacity;
+	}
+}

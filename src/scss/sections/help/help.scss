@@ -1,0 +1,112 @@
+.help {
+	padding: 176px 0 149px;
+
+	.container {
+		max-width: 743px;
+	}
+
+	.h3-wrapp {
+		margin-bottom: 80px;
+	}
+
+	.subtitle {
+		margin-bottom: 22px;
+	}
+
+	.dropdown-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		cursor: pointer;
+		margin-bottom: 30px;
+
+		&::after {
+			display: block;
+			content: "";
+			background: #d8e3fe;
+			width: 100%;
+			height: 1px;
+		}
+
+		&.opened {
+			.dropdown-open {
+				display: flex;
+				animation: dropdown 1s;
+
+				@keyframes dropdown {
+					0% {
+						margin: 0;
+					}
+					100% {
+						margin: 0 0 34px;
+					}
+				}
+
+			}
+
+			.dropdown-image svg {
+				transform: rotate( 180deg);
+			}
+
+			svg path {
+				stroke: black;
+			}
+
+			.dropdown-question-text {
+				color: black;
+				transition: ease $tr;
+			}
+		}
+	}
+
+	.dropdown-question {
+		display: flex;
+		align-items: center;
+		padding-bottom: 26px;
+	}
+
+	.dropdown-image {
+		display: flex;
+		align-items: center;
+		width: 19px;
+		height: 19px;
+		margin-right: 24px;
+		margin-left: 5px;
+
+		svg {
+			transition: ease $tr;
+		}
+	}
+
+	.dropdown-arrow {
+		width: 100%;
+		height: auto;
+	}
+
+	.dropdown-question-text {
+		font-family: $ff-quick;
+		font-weight: $fw-medium;
+		font-size: $fs-sm;
+		line-height: 1.3;
+		letter-spacing: $ls03;
+		color: $drd-quest;
+	}
+
+	.dropdown-open {
+		display: none;
+		justify-content: space-between;
+		margin: 0px 0 34px;
+		padding-left: 50px;
+	}
+
+	.dropdown-text {
+		width: 100%;
+		max-width: 391px;
+		font-family: $ff-roboto;
+		font-weight: $fw-regular;
+		font-size: $fs-ss;
+		line-height: 1.9;
+		letter-spacing: $ls03;
+		color: $plan-text;
+	}
+}
