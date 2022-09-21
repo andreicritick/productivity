@@ -8,29 +8,50 @@ document.addEventListener( 'DOMContentLoaded',  () => {
 } )
 
 const toogleDropdown = () => {
-    const dropdown = document.querySelectorAll( '.dropdown-item' )
+    const dropdowns = document.querySelectorAll( '.dropdown-item' )
 
-    if ( ! dropdown.length ) return
+    if ( ! dropdowns.length ) return
 
-    dropdown.forEach( item => {
+    dropdowns.forEach( dropdown => {
+        dropdown.addEventListener( 'click', () => {
+            const dropdownOpen = dropdown.querySelector( '.dropdown-open' )
 
-        item.addEventListener( 'click', () => {
+            if ( ! dropdownOpen ) return
 
-            const dropdownOpen = item.querySelector( '.dropdown-open' )
-            const dropdownInner = item.querySelector( '.dropdown-inner' )
-
-            if ( ! dropdownOpen && ! dropdownInner) return
-
-            if ( ! item.classList.contains( 'opened') ) {
-                item.classList.add( 'opened' )
-
-                const textHeight = dropdownInner.getBoundingClientRect().height
-                dropdownOpen.style.height = `${ textHeight }px`
+            if ( ! dropdown.classList.contains( 'opened') ) {
+                dropdown.classList.add( 'opened' )
+                reCalculateDropdownHeight(dropdown)
             }
             else {
-                item.classList.remove( 'opened' )
+                dropdown.classList.remove( 'opened' )
                 dropdownOpen.style.height = '0'
             }
         })
     })
+}
+
+/**
+ * Window resize function.
+ */
+window.addEventListener('resize', () => {
+    // Get all opened dropdowns.
+    const dropdowns = document.querySelectorAll( '.dropdown-item.opened' )
+
+    if( ! dropdowns.length ) return
+
+    dropdowns.forEach(dropdown => reCalculateDropdownHeight(dropdown))
+})
+
+/**
+ * Re-calculates dropdown height.
+ *
+ * @param {HTMLElement} dropdown
+ */
+const reCalculateDropdownHeight = dropdown => {
+    const dropdownOpen  = dropdown.querySelector( '.dropdown-open' ),
+        dropdownInner   = dropdown.querySelector( '.dropdown-inner' )
+
+    if (! dropdownOpen || ! dropdownInner) return
+
+    dropdownOpen.style.height = `${ dropdownInner.getBoundingClientRect().height }px`
 }
