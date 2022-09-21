@@ -1,0 +1,75 @@
+.get-started {
+	padding: 44px 0 30px;
+	background: $bg-stat-dark;
+
+	@media all and (min-width: $md) {
+		padding: 55px 0 56px;
+	}
+
+	.container {
+		max-width: 1297px;
+		background-image: url( '/img/get-started/clouds.png') no-repeat;
+		background-position: center;
+		background-size: 100% auto;
+		padding: 35px 0 ;
+	}
+
+	&-inner {
+		width: 100%;
+		max-width: 712px;
+		margin: 0 auto 54px auto;
+		padding: 0 20px;
+	}
+
+	.subtitle {
+		color: $white;
+		text-align: center;
+		margin-bottom: 16px;
+	}
+
+	&-title {
+		font-family: $ff-quick;
+		font-weight: $fw-light;
+		font-size: $fs-xl;
+		line-height: 1.25;
+		color: $white;
+		text-align: center;
+		margin-bottom: 22px;
+
+		@media all and (min-width: $md) {
+			font-size: $fs-xxl;
+		}
+
+		span {
+			font-weight: $fw-medium;
+		}
+	}
+
+	&-text {
+		font-family: 'Roboto';
+		font-weight: $fw-regular;
+		font-size: $fs-ss;
+		line-height: 1.9;
+		letter-spacing: $ls03;
+		color: $white;
+		text-align: center;
+
+		@media all and (min-width: $md) {
+			font-size: $fs-sm;
+		}
+	}
+
+	&-ui {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 284px;
+		border: 1px solid #a0b4ff;
+		margin: 0 auto;
+	}
+
+	&-link {
+		color: #C7D3FF;
+		margin: 0 auto;
+	}
+}

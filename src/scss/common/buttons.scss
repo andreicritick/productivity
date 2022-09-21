@@ -272,3 +272,18 @@
 		opacity: $opacity;
 	}
 }
+
+//get-started
+.get-started-button {
+	width: 130px;
+	height: 43px;
+	background: $white;
+	border: 0;
+	color: #565f82;
+	cursor: pointer;
+	transition: ease $tr;
+
+	&:hover {
+		opacity: $opacity;
+	}
+}

@@ -10,7 +10,7 @@
 	}
 
 	@media all and (min-width: $xl) {
-		padding: 176px 0 149px;
+		padding: 175px 0 158px;
 	}
 
 	.container {
@@ -67,7 +67,7 @@
 	.dropdown-inner {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center; //sb
+		justify-content: center;
 
 		@media all and (min-width: $md) {
 			justify-content: space-between;
@@ -115,7 +115,7 @@
 		height: 0;
 		overflow: hidden;
 		justify-content: center;
-		margin: 0px 0 34px;
+		margin: 0px 0 31px;
 		transition: height ease 1s;
 
 		@media all and (min-width: $md) {
