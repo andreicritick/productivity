@@ -8,15 +8,29 @@ document.addEventListener( 'DOMContentLoaded',  () => {
 } )
 
 const toogleDropdown = () => {
-    const dropdown =document.querySelectorAll( '.dropdown-item' )
+    const dropdown = document.querySelectorAll( '.dropdown-item' )
 
     if ( ! dropdown.length ) return
 
     dropdown.forEach( item => {
+
         item.addEventListener( 'click', () => {
-            if ( ! item.classList.contains( 'opened') )
+
+            const dropdownOpen = item.querySelector( '.dropdown-open' )
+            const dropdownInner = item.querySelector( '.dropdown-inner' )
+
+            if ( ! dropdownOpen && ! dropdownInner) return
+
+            if ( ! item.classList.contains( 'opened') ) {
                 item.classList.add( 'opened' )
-            else item.classList.remove( 'opened' )
+
+                const textHeight = dropdownInner.getBoundingClientRect().height
+                dropdownOpen.style.height = `${ textHeight }px`
+            }
+            else {
+                item.classList.remove( 'opened' )
+                dropdownOpen.style.height = '0'
+            }
         })
     })
 }

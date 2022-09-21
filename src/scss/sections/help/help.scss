@@ -34,7 +34,7 @@
 		flex-direction: column;
 		justify-content: center;
 		cursor: pointer;
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 
 		&::after {
 			display: block;
@@ -45,21 +45,6 @@
 		}
 
 		&.opened {
-			.dropdown-open {
-				display: flex;
-				flex-wrap: wrap;
-				animation: dropdown 1s;
-
-				@keyframes dropdown {
-					0% {
-						margin: 0;
-					}
-					100% {
-						margin: 0 0 34px;
-					}
-				}
-			}
-
 			.dropdown-image svg {
 				transform: rotate( 180deg);
 			}
@@ -73,25 +58,21 @@
 				transition: ease $tr;
 			}
 
-			.dropdown-text {
-				animation: text 1s;
-
-				@keyframes text {
-					0% {
-						opacity: 0;
-					}
-					100% {
-						opacity: 1;
-					}
-				}
+			.dropdown-question {
+				padding-bottom: 26px;
 			}
 		}
+	}
+
+	.dropdown-inner {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.dropdown-question {
 		display: flex;
 		align-items: center;
-		padding-bottom: 26px;
+		transition: padding ease 1s;
 	}
 
 	.dropdown-image {
@@ -126,9 +107,11 @@
 	}
 
 	.dropdown-open {
-		display: none;
+		height: 0;
+		overflow: hidden;
 		justify-content: center;
 		margin: 0px 0 34px;
+		transition: height ease 1s;
 
 		@media all and (min-width: $md) {
 			justify-content: space-between;
