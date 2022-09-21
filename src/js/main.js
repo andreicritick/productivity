@@ -23,3 +23,6 @@ import './blog/gallery'
 
 //customers
 import './customers/customers-slide'
+
+//help
+import './help/dropdown'
