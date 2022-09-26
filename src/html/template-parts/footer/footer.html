@@ -1,11 +1,10 @@
 <footer class="footer">
 	<div class="container">
-	<header class="header foot">
+		<div class="header foot">
+			<a class="header-logo" href="/">
+				<img src="img/header/logo.svg" width="26" height="26" alt="">
+			</a>
 			<div class="header-wrapp">
-				<a class="header-logo" href="/">
-					<img src="img/header/logo.svg" width="26" height="26" alt="">
-				</a>
-
 				<div id="body-lock" class="header-menu-wrapper">
 					<nav class="header-menu">
 						@@loop( "../header/header-item.html", [
@@ -25,13 +24,14 @@
 						Get started
 					</button>
 				</div><!-- .header-menu-wrapper -->
-
+				<div class="footer-text-wrapp">
+					<p class="footer-text">
+						Copyright © 2018 by Random site
+					</p>
+				</div>
 			</div>
-	</header>
-	<p class="footer-text">
-		Copyright © 2018 by Random site
-	</p>
-</div>
+		</div>
+	</div>
 </footer>
 </div><!-- .wrapper -->
 @@include( '../form/header-form.html' )
