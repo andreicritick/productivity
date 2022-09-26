@@ -19,6 +19,7 @@
 
         @media all and (min-width: $md) {
             display: flex;
+			flex-wrap: wrap;
         }
 
 		.header-logo {
@@ -37,13 +38,9 @@
 				margin: 0;
                 padding-top: 8px;
                 padding-right: 15px;
-                max-width: 50px;
-                justify-content: flex-start;
+				width: 99px;
+				justify-content: flex-start;
 			}
-
-			@media all and (min-width: $lg) {
-                max-width: 99px;
-            }
 		}
 
 		.header-wrapp {
@@ -84,10 +81,6 @@
 
         .header-menu-wrapper {
             @media all and (min-width: $md) {
-                width: calc( 100% - 50px );
-            }
-
-            @media all and (min-width: $lg) {
                 width: calc( 100% - 99px );
             }
         }
