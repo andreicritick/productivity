@@ -287,3 +287,41 @@
 		opacity: $opacity;
 	}
 }
+
+//newsletter
+.email-button {
+	width: 184px;
+	height: 59px;
+	border: 0;
+	border-radius: 5px;
+	font-family: $ff-quick;
+	font-weight: $fw-bold;
+	font-size: $fs-s;
+	line-height: 1.2;
+	color: $white;
+	background: #4D6CE1;
+	cursor: pointer;
+	transition: opacity ease $tr;
+	margin: 0 auto;
+
+	@media all and (min-width: $sm) {
+		width: 100px;
+		margin: 0 0 0 14px;
+	}
+
+	@media all and (min-width: $m) {
+		width: 184px;
+	}
+
+	@media all and (min-width: $md) {
+		width: 120px;
+	}
+
+	@media all and (min-width: $lg) {
+		width: 184px;
+	}
+
+	&:hover {
+		opacity: $opacity;
+	}
+}

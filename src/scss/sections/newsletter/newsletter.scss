@@ -1,0 +1,118 @@
+.newsletter {
+	padding: 30px 0 40px;
+
+	@media all and (min-width: $md) {
+		padding: 70px 0 60px;
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 90px 0 80px
+	}
+
+	@media all and (min-width: $xl) {
+		padding: 118px 0 120px
+	}
+
+	.container {
+		max-width: 927px;
+	}
+
+	&-inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
+	}
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-bottom: 30px;
+
+		@media all and (min-width: $md) {
+			max-width: 330px;
+			margin-bottom: 0;
+		}
+	}
+
+	&-title {
+		font-family: $ff-quick;
+		font-weight: $fw-bold;
+		font-size: $fs-md;
+		line-height: 1.2;
+		color: $headings;
+		margin-bottom: 20px;
+		text-align: center;
+
+		@media all and (min-width: $md) {
+			text-align: left;
+		}
+	}
+
+	&-text {
+		font-family: $ff-roboto;
+		font-weight: $fw-regular;
+		font-size: $fs-ss;
+		line-height: 1.9;
+		letter-spacing: $ls03;
+		color: $plan-text;
+		text-align: center;
+
+		@media all and (min-width: $md) {
+			text-align: left;
+		}
+	}
+
+	&-email {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media all and (min-width: $md) {
+			justify-content: flex-start;
+		}
+	}
+
+	.email-inner {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 0;
+	}
+
+	&-input {
+		width: 279px;
+		height: 59px;
+		margin: 0 auto 20px auto;
+		font-family: $ff-quick;
+		font-weight: $fw-bold;
+		font-size: $fs-s;
+		line-height: 1.2;
+		color: #7A85AD;
+		padding-left: 23px;
+		background: #EFEFF7;
+		border-radius: 5px;
+
+		@media all and (min-width: $sm) {
+			width: 200px;
+			margin: 0;
+		}
+
+		@media all and (min-width: $m) {
+			width: 279px;
+		}
+
+		@media all and (min-width: $md) {
+			width: 240px;
+		}
+
+		@media all and (min-width: $lg) {
+			width: 279px;
+		}
+	}
+}
