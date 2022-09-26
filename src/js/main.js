@@ -26,3 +26,6 @@ import './customers/customers-slide'
 
 //help
 import './help/dropdown'
+
+//footer
+import './footer/footer'

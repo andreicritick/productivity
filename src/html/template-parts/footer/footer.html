@@ -1,5 +1,39 @@
-		<footer class="footer"></footer>
-	</div><!-- .wrapper -->
-	@@include( '../form/header-form.html' )
+<footer class="footer">
+	<div class="container">
+	<header class="header foot">
+			<div class="header-wrapp">
+				<a class="header-logo" href="/">
+					<img src="img/header/logo.svg" width="26" height="26" alt="">
+				</a>
+
+				<div id="body-lock" class="header-menu-wrapper">
+					<nav class="header-menu">
+						@@loop( "../header/header-item.html", [
+								{ "name": "home", "href": "/" }, { "name": "blog", "href": "/" }, { "name": "features", "href": "/" },
+								{ "name": "pricing", "href": "/" }, { "name": "documentation", "href": "/" }
+							] )
+					</nav>
+					<div class="header-icons">
+						@@loop( "../header/header-icon.html", [
+								{ "img": "img/header/facebook-logo.svg", "href": "https://www.facebook.com/" },
+								{ "img": "img/header/telegram-logo.svg", "href": "https://telegram.org/" },
+								{ "img": "img/header/twit-logo.svg", "href": "https://investor.twitterinc.com/" },
+								{ "img": "img/header/m-logo.svg", "href": "https://mail.ru/" }
+							] )
+					</div>
+					<button class="header-button">
+						Get started
+					</button>
+				</div><!-- .header-menu-wrapper -->
+
+			</div>
+	</header>
+	<p class="footer-text">
+		Copyright © 2018 by Random site
+	</p>
+</div>
+</footer>
+</div><!-- .wrapper -->
+@@include( '../form/header-form.html' )
 </body>
 </html>

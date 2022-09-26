@@ -1,0 +1,140 @@
+.footer {
+	padding: 40px 0;
+
+	@media all and (min-width: $md) {
+		padding: 70px 0;
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 93px 0;
+	}
+
+	.header.foot {
+		padding: 0;
+		position: static;
+		border: 0;
+
+		.header-logo {
+			margin-bottom: 20px;
+
+			@media all and (min-width: $md) {
+				margin: 0;
+				margin-right: 30px;
+			}
+
+			@media all and (min-width: $lg) {
+				margin-right: 73px;
+			}
+		}
+
+		.header-wrapp {
+			display: flex;
+			flex-direction: column;
+
+			@media all and (min-width: $md) {
+				flex-direction: row;
+			}
+		}
+
+		.header-menu {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			margin-bottom: 20px;
+
+			@media all and (min-width: $m) {
+				flex-direction: row;
+			}
+
+			@media all and (min-width: $md) {
+				margin: 0;
+				margin-right: 3%;
+				width: auto;
+			}
+
+			@media all and (min-width: $lg) {
+				margin-right: 5%;
+			}
+
+			@media all and (min-width: $xl) {
+				margin-right: 30%;
+			}
+		}
+
+		.header-item {
+			margin-bottom: 5px;
+
+			@media all and (min-width: $m) {
+				margin-bottom: 0;
+				margin-right: 20px;
+			}
+
+			@media all and (min-width: $lg) {
+				margin-right: 32px;
+			}
+
+			@media all and (min-width: $xxl) {
+				margin-right: 42px;
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+
+		.header-menu-wrapper {
+			display: flex;
+			flex-direction: column;
+
+			@media all and (min-width: $md) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+
+		.header-icons {
+			display: flex;
+			margin-bottom: 30px;
+
+			@media all and (min-width: $md) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+				margin-left: auto;
+			}
+
+			a:hover {
+				svg path {
+					fill: #6188ff;
+				}
+			}
+
+            svg path {
+                transition: fill ease $tr;
+            }
+		}
+
+		.header-button {
+			justify-content: center;
+		}
+	}
+
+	&-text {
+		font-family: $ff-quick;
+		font-weight: $fw-medium;
+		font-size: $fs-xs;
+		line-height: 15px;
+		letter-spacing: $ls05;
+		text-transform: capitalize;
+		color: #AEB8D0;
+		margin-top: 30px;
+		text-align: center;
+
+		@media all and (min-width: $md) {
+			text-align: left;
+			padding-left: 100px;
+		}
+	}
+}
