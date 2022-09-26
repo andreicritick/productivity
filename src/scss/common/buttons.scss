@@ -281,7 +281,7 @@
 	border: 0;
 	color: #565f82;
 	cursor: pointer;
-	transition: ease $tr;
+	transition: opacity ease $tr;
 
 	&:hover {
 		opacity: $opacity;
