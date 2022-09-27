@@ -12,7 +12,7 @@
 		padding: 93px 0;
 	}
 
-	.header.foot {
+	.header.footer-header {
 		padding: 0;
 		position: static;
 		border: 0;
@@ -21,126 +21,20 @@
             display: flex;
 			flex-wrap: wrap;
         }
+	}
 
-		.header-logo {
-            display: flex;
-            justify-content: center;
-			margin-bottom: 20px;
-            width: 100%;
-            height: auto;
+	.header-button {
+		display: block;
+		justify-content: center;
 
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-
-			@media all and (min-width: $md) {
-				margin: 0;
-                padding-top: 8px;
-                padding-right: 15px;
-				width: 99px;
-				justify-content: flex-start;
-			}
+		@media all and (min-width: $md) {
+			margin: 40px auto 0 auto;
+			width: 80%;
 		}
 
-		.header-wrapp {
-			display: flex;
-			flex-direction: column;
-
-			@media all and (min-width: $md) {
-				flex-direction: row;
-			}
-		}
-
-		.header-menu {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 100%;
-			margin-bottom: 40px;
-            justify-content: space-evenly;
-
-			@media all and (min-width: $m) {
-				flex-direction: row;
-			}
-
-			@media all and (min-width: $md) {
-				margin: 0;
-				margin-right: 3%;
-				width: auto;
-			}
-
-			@media all and (min-width: $lg) {
-				margin-right: 5%;
-			}
-
-			@media all and (min-width: $xl) {
-				margin-right: 30%;
-			}
-		}
-
-        .header-menu-wrapper {
-            @media all and (min-width: $md) {
-                width: calc( 100% - 99px );
-            }
-        }
-
-		.header-item {
-			margin-bottom: 5px;
-
-			@media all and (min-width: $m) {
-				margin-bottom: 0;
-				margin-right: 20px;
-			}
-
-			@media all and (min-width: $lg) {
-				margin-right: 32px;
-			}
-
-			@media all and (min-width: $xxl) {
-				margin-right: 42px;
-			}
-
-			&:last-child {
-				margin: 0;
-			}
-		}
-
-		.header-menu-wrapper {
-			display: flex;
-			flex-direction: column;
-
-			@media all and (min-width: $md) {
-				flex-direction: row;
-				justify-content: space-between;
-			}
-		}
-
-		.header-icons {
-			display: flex;
-			margin-bottom: 20px;
-
-			@media all and (min-width: $md) {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				margin: 0;
-				margin-left: auto;
-			}
-
-			a:hover {
-				svg path {
-					fill: #6188ff;
-				}
-			}
-
-            svg path {
-                transition: fill ease $tr;
-            }
-		}
-
-		.header-button {
-			justify-content: center;
+		@media all and (min-width: $lg) {
+			margin: 0 0 0 44px;
+			width: auto;
 		}
 	}
 
@@ -159,8 +53,134 @@
 		margin-top: 30px;
 		text-align: center;
 
-		@media all and (min-width: $md) {
+		@media all and (min-width: $lg) {
 			text-align: left;
+		}
+	}
+
+	.header-logo {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+		width: 100%;
+		height: auto;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		@media all and (min-width: $md) {
+			margin: 0;
+			padding-right: 15px;
+			width: 99px;
+			justify-content: flex-start;
+		}
+
+		@media all and (min-width: $lg) {
+			padding-top: 8px;
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.header-wrapp {
+		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+				width: calc( 100% - 99px );
+		}
+	}
+
+	.header-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 40px;
+		justify-content: space-evenly;
+
+		@media all and (min-width: $m) {
+			flex-direction: row;
+		}
+
+		@media all and (min-width: $md) {
+			margin: 0;
+			width: calc( 50% - 99px );
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 5%;
+			width: auto;
+		}
+
+		@media all and (min-width: $xl) {
+			margin-right: 30%;
+		}
+	}
+
+	.header-item {
+		margin-bottom: 5px;
+
+		@media all and (min-width: $m) {
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 32px;
+		}
+
+		@media all and (min-width: $xxl) {
+			margin-right: 42px;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	.header-menu-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	.header-icons {
+		display: flex;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $md) {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			margin: 0;
+			width: 50%;
+		}
+
+		@media all and (min-width: $lg ) {
+			justify-content: center;
+			margin-left: auto;
+			width: auto;
+		}
+
+		a:hover {
+			svg path {
+				fill: #6188ff;
+			}
+		}
+
+		svg path {
+			transition: fill ease $tr;
 		}
 	}
 }

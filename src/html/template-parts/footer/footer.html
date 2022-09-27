@@ -1,29 +1,12 @@
 <footer class="footer">
 	<div class="container">
-		<div class="header foot">
-			<a class="header-logo" href="/">
-				<img src="img/header/logo.svg" width="26" height="26" alt="">
-			</a>
+		<div class="footer-wrapper">
+			@@include( '../header/header-logo.html' )
 			<div class="header-wrapp">
-				<div class="header-menu-wrapper">
-					<nav class="header-menu">
-						@@loop( "../header/header-item.html", [
-								{ "name": "home", "href": "/" }, { "name": "blog", "href": "/" }, { "name": "features", "href": "/" },
-								{ "name": "pricing", "href": "/" }, { "name": "documentation", "href": "/" }
-							] )
-					</nav>
-					<div class="header-icons">
-						@@loop( "../header/header-icon.html", [
-								{ "img": "img/header/facebook-logo.svg", "href": "https://www.facebook.com/" },
-								{ "img": "img/header/telegram-logo.svg", "href": "https://telegram.org/" },
-								{ "img": "img/header/twit-logo.svg", "href": "https://investor.twitterinc.com/" },
-								{ "img": "img/header/m-logo.svg", "href": "https://mail.ru/" }
-							] )
-					</div>
-					<button class="header-button">
-						Get started
-					</button>
-				</div><!-- .header-menu-wrapper -->
+				<div class="header-menu-wrapper footer-menu-wrapper">
+					@@include( '../header/header-menu-wrapp.html')
+				</div>
+
 				<div class="footer-text-wrapp">
 					<p class="footer-text">
 						Copyright © 2018 by Random site
