@@ -1,0 +1,18 @@
+
+<nav class="header-menu">
+    @@loop( "header-item.html", [
+            { "name": "home", "href": "/" }, { "name": "blog", "href": "/" }, { "name": "features", "href": "/" },
+            { "name": "pricing", "href": "/" }, { "name": "documentation", "href": "/" }
+        ] )
+</nav>
+<div class="header-icons">
+    @@loop( "header-icon.html", [
+            { "img": "img/header/facebook-logo.svg", "href": "https://www.facebook.com/" },
+            { "img": "img/header/telegram-logo.svg", "href": "https://telegram.org/" },
+            { "img": "img/header/twit-logo.svg", "href": "https://investor.twitterinc.com/" },
+            { "img": "img/header/m-logo.svg", "href": "https://mail.ru/" }
+        ] )
+</div>
+<button class="header-button">
+    Get started
+</button>
