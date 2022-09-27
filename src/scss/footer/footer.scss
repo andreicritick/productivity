@@ -24,12 +24,13 @@
 	}
 
 	.header-button {
-		display: block;
+		display: flex;
 		justify-content: center;
+		align-items: center;
 
 		@media all and (min-width: $md) {
-			margin: 40px auto 0 auto;
-			width: 80%;
+			margin: 0 0 20px 44px;
+			width: auto;
 		}
 
 		@media all and (min-width: $lg) {
@@ -40,6 +41,7 @@
 
     &-text-wrapp {
         width: 100%;
+		margin-top: 30px;
     }
 
 	&-text {
@@ -50,10 +52,9 @@
 		letter-spacing: $ls05;
 		text-transform: capitalize;
 		color: #AEB8D0;
-		margin-top: 30px;
 		text-align: center;
 
-		@media all and (min-width: $lg) {
+		@media all and (min-width: $md) {
 			text-align: left;
 		}
 	}
@@ -110,12 +111,13 @@
 		}
 
 		@media all and (min-width: $md) {
-			margin: 0;
-			width: calc( 50% - 99px );
+			margin: 0 0 20px 0;
+			width: 100%;
+			justify-content: flex-start;
 		}
 
 		@media all and (min-width: $lg) {
-			margin-right: 5%;
+			margin: 0 5% 0 0;
 			width: auto;
 		}
 
@@ -151,7 +153,6 @@
 
 		@media all and (min-width: $md) {
 			flex-direction: row;
-			justify-content: space-between;
 		}
 	}
 
@@ -161,15 +162,15 @@
 
 		@media all and (min-width: $md) {
 			display: flex;
-			justify-content: space-evenly;
+			justify-content: flex-start;
 			align-items: center;
-			margin: 0;
-			width: 50%;
+			margin: 0 0 20px 0;
+			width: auto;
 		}
 
 		@media all and (min-width: $lg ) {
 			justify-content: center;
-			margin-left: auto;
+			margin: 0 0 0 auto;
 			width: auto;
 		}
 
