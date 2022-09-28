@@ -82,7 +82,7 @@
 .form-button {
 	font-size: $fs-sm;
 	border-radius: 3px;
-	padding: 15px 50px;
+	padding: 8px 30px;
 	border: 0;
 	background-color: #98b8f8;
 	color: $white;
@@ -94,55 +94,6 @@
 	}
 }
 
-.close-form {
-    position: absolute;
-    top: 56px;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-
-	@media all and (min-width: $md) {
-		top: 66px;
-	}
-
-    span {
-        position: absolute;
-        top: -47px;
-        right: 10px;
-        background:	none;
-        width: 30px;
-        height: 30px;
-    }
-
-    span:hover::before, span:hover::after {
-		background: #565f82;
-    }
-
-    span::before {
-        content: "";
-        position: absolute;
-        top: 14px;
-        right: 0;
-        height: 4px;
-        width: 100%;
-        transform: rotate(-45deg);
-        background:	$white;
-        transition: $tr;
-    }
-
-    span:after {
-        content: "";
-        position: absolute;
-        top: 14px;
-        right: 0;
-        height: 4px;
-        width: 100%;
-        background:	$white;
-        transform: rotate(45deg);
-        transition: $tr;
-    }
-}
 //hero-buttons
 .hero-button {
 	display: flex;
