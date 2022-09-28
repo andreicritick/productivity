@@ -11,6 +11,9 @@ import './form/header-form'
 import './hero/hero-swiper'
 import './hero/hero-popup'
 
+// Plan
+import './plan/plan'
+
 //brands
 import './brands/brands'
 
