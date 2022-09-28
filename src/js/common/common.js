@@ -1,19 +1,21 @@
-let windowHeight = window.innerHeight
-export const getWindowHeight = () => windowHeight
+document.addEventListener( 'DOMContentLoaded', () => {
+	'use strict'
 
-export const isInScope = ( elementSelector, st, offset = 0 ) => {
-	const element  = document.querySelector( elementSelector )
-	if ( ! element) return
-	let bodyRect  = document.body.getBoundingClientRect(),
-		elemRect  = element.getBoundingClientRect(),
-		elemTop   = elemRect.top - bodyRect.top
+	const tag = document.createElement('script')
+	tag.src = 'https://www.youtube.com/iframe_api'
 
-	if( ! element ) return
+	const firstScriptTag = document.getElementsByTagName('script')[0]
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+} )
 
-	if(
-		st >= ( elemTop - getWindowHeight() + offset ) &&
-		st <= ( elemTop + element.clientHeight - offset )
-	) return true
+/**
+ * When YT player is ready.
+ *
+ * @param {Object} event	Player ready event.
+ */
+const onPlayerReady = event => {
+	event.target.setVolume(20)
+	event.target.playVideo()
 
-    return false
+	if (!playerObject) playerObject = event.target
 }

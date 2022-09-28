@@ -1,6 +1,9 @@
 export const WINDOW_WIDTH_MD = 768
 
-let targetElement
+let windowHeight = window.innerHeight,
+	targetElement
+
+export const getWindowHeight = () => windowHeight
 
 export const setTargetElement = elementId => {
     targetElement = document.querySelector( `#${ elementId }` )
@@ -81,3 +84,4 @@ export const isInScope = ( elementSelector, st, offset = 0 ) => {
 
     return false
 }
+
