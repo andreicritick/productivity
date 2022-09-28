@@ -1,19 +1,9 @@
-let windowHeight = window.innerHeight
-export const getWindowHeight = () => windowHeight
+document.addEventListener( 'DOMContentLoaded', () => {
+	'use strict'
 
-export const isInScope = ( elementSelector, st, offset = 0 ) => {
-	const element  = document.querySelector( elementSelector )
-	if ( ! element) return
-	let bodyRect  = document.body.getBoundingClientRect(),
-		elemRect  = element.getBoundingClientRect(),
-		elemTop   = elemRect.top - bodyRect.top
+	const tag = document.createElement('script')
+	tag.src = 'https://www.youtube.com/iframe_api'
 
-	if( ! element ) return
-
-	if(
-		st >= ( elemTop - getWindowHeight() + offset ) &&
-		st <= ( elemTop + element.clientHeight - offset )
-	) return true
-
-    return false
-}
+	const firstScriptTag = document.getElementsByTagName('script')[0]
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+} )

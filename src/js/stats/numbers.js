@@ -1,4 +1,4 @@
-import { isInScope } from '../common/common'
+import { isInScope } from '../common/global'
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
