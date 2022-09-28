@@ -1,5 +1,5 @@
 // Header-buttons
-.header-button {
+.button {
 	display: none;
 	font-family: $ff-quick;
 	font-weight: $fw-bold;
@@ -19,16 +19,18 @@
 		display: block;
 	}
 
-	&.rm {
+	&:hover {
+		opacity: $opacity;
+	}
+
+	&.about-button {
 		display: block;
 		background: $button-bg-orange;
 		color: $orange;
 	}
-
-	&:hover {
-		opacity: $opacity;
-	}
 }
+
+
 
 .burger-button {
 	position: relative;
