@@ -55,33 +55,33 @@
 			font-size: $fs-sm;
 		}
 	}
+}
 
-	.hero-popup {
-		position: fixed;
-		display: none;
-		align-items: center;
-		justify-content: center;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 100;
-		overflow-y: auto;
-		padding: 20px;
-		background: $bg-input;
+.hero-popup {
+	position: fixed;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	overflow-y: auto;
+	padding: 20px;
+	background: $bg-input;
 
-		&-frame .iframe {
-			display: block;
-		}
+	&-frame .iframe {
+		display: block;
+	}
 
-		&.opened {
-			display: flex;
-		}
+	&.opened {
+		display: flex;
+	}
 
-		&-inner {
-			position: relative;
-			margin: auto 0;
-		}
+	&-inner {
+		position: relative;
+		margin: auto 0;
 	}
 
 	iframe {
@@ -110,6 +110,7 @@
 		}
 	}
 }
+
 //swiper
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
