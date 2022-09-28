@@ -80,31 +80,14 @@
 }
 
 .form-button {
-	width: 100%;
-	height: 30px;
 	font-size: $fs-sm;
-	border-radius: 50px;
+	border-radius: 3px;
+	padding: 15px 50px;
 	border: 0;
-	background-color: $headings;
+	background-color: #98b8f8;
 	color: $white;
 	cursor: pointer;
 	transition: opacity ease-in-out $tr;
-
-	@media all and (min-width: $sm) {
-		font-size: $fs-md;
-	}
-
-	@media all and (min-width: $sm) {
-		height: 40px;
-	}
-
-	@media all and (min-width: $md) {
-		height: 50px;
-	}
-
-	@media all and (min-width: $lg) {
-		height: 60px;
-	}
 
 	&:hover {
 		opacity: $opacity;
@@ -127,13 +110,13 @@
         position: absolute;
         top: -47px;
         right: 10px;
-        background-image: none;
+        background:	none;
         width: 30px;
         height: 30px;
     }
 
     span:hover::before, span:hover::after {
-        background: $button-bg-blue;
+		background: #565f82;
     }
 
     span::before {
@@ -144,7 +127,7 @@
         height: 4px;
         width: 100%;
         transform: rotate(-45deg);
-        background: $bg-input;
+        background:	$white;
         transition: $tr;
     }
 
@@ -155,7 +138,7 @@
         right: 0;
         height: 4px;
         width: 100%;
-        background: $bg-input;
+        background:	$white;
         transform: rotate(45deg);
         transition: $tr;
     }
