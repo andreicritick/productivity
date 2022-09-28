@@ -9,8 +9,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	togglePopup()
 } )
 
-const onYouTubeIframeAPIReady = (isAutoCall, videoId) => {
-	if(isAutoCall || ! videoId) return
+const onYouTubeIframeAPIReady = (videoId) => {
+	if(! videoId) return
 
 	playerObject = new YT.Player('player', {
 		videoId: videoId,
@@ -50,15 +50,14 @@ const togglePopup = () => {
 
 			if (!popupFrame || !ytUrl) return
 
-			popupFrame.innerHTML = '<div id="player"></div>'
 			popup.classList.add( 'opened' )
 
 			const videoId = getParamsFromUrl(ytUrl).v
 
 			if( playerObject ){
-				playerObject.playVideo();
+				playerObject.playVideo()
 			}	else {
-				onYouTubeIframeAPIReady(0, videoId)
+				onYouTubeIframeAPIReady(videoId)
 			}
 
 			if ( popup.classList.contains( 'opened' ) )
