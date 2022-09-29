@@ -7,7 +7,7 @@
 <br />
 
 ### 1. Download archive or clone these files with:
-`git clone https://github.com/andreicritick/gulp-html.git`
+`git clone https://github.com/andreicritick/productivity.git`
 
 ### 2. Install dependencies:
 `npm i`

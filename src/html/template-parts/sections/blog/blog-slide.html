@@ -1,0 +1,23 @@
+<div class="swiper-slide blog-slide">
+    <div class="blog-gallery">
+    @@loop( 'gallery-item.html', [
+        { "src": "@@img1" },
+        { "src": "@@img2" },
+        { "src": "@@img3" }
+    ] )
+</div>
+    <div class="blog-info">
+        <div class="blog-title">
+            @@title
+        </div>
+        <div class="blog-text">
+            @@text
+        </div>
+        <div class="blog-buttons">
+            <button class="button">
+                Read now
+            </button>
+            <a class="blog-link" href="#">Add to your bookmarks</a>
+        </div>
+    </div>
+</div>

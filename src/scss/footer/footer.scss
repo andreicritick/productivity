@@ -1,0 +1,187 @@
+.footer {
+	padding: 40px 0;
+    border-top: 1px solid #d8e3fe;
+    display: flex;
+    flex-direction: column;
+
+	@media all and (min-width: $md) {
+		padding: 70px 0;
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 93px 0;
+	}
+
+	.header.footer-header {
+		padding: 0;
+		position: static;
+		border: 0;
+
+        @media all and (min-width: $md) {
+            display: flex;
+			flex-wrap: wrap;
+        }
+	}
+
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media all and (min-width: $md) {
+			margin: 0 0 20px 44px;
+			width: auto;
+		}
+
+		@media all and (min-width: $lg) {
+			margin: 0 0 0 44px;
+			width: auto;
+		}
+	}
+
+    &-text-wrapp {
+        width: 100%;
+		margin-top: 30px;
+    }
+
+	&-text {
+		font-family: $ff-quick;
+		font-weight: $fw-medium;
+		font-size: $fs-xs;
+		line-height: 15px;
+		letter-spacing: $ls05;
+		text-transform: capitalize;
+		color: #AEB8D0;
+		text-align: center;
+
+		@media all and (min-width: $md) {
+			text-align: left;
+		}
+	}
+
+	.header-logo {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+		width: 100%;
+		height: auto;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		@media all and (min-width: $md) {
+			margin: 0;
+			padding-right: 15px;
+			width: 99px;
+			justify-content: flex-start;
+		}
+
+		@media all and (min-width: $lg) {
+			padding-top: 8px;
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.header-wrapp {
+		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+				width: calc( 100% - 99px );
+		}
+	}
+
+	.header-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 40px;
+		justify-content: space-evenly;
+
+		@media all and (min-width: $m) {
+			flex-direction: row;
+		}
+
+		@media all and (min-width: $md) {
+			margin: 0 0 20px 0;
+			width: 100%;
+			justify-content: flex-start;
+		}
+
+		@media all and (min-width: $lg) {
+			margin: 0 5% 0 0;
+			width: auto;
+		}
+
+		@media all and (min-width: $xl) {
+			margin-right: 30%;
+		}
+	}
+
+	.header-item {
+		margin-bottom: 5px;
+
+		@media all and (min-width: $m) {
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 32px;
+		}
+
+		@media all and (min-width: $xxl) {
+			margin-right: 42px;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	.header-menu-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
+	}
+
+	.header-icons {
+		display: flex;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $md) {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin: 0 0 20px 0;
+			width: auto;
+		}
+
+		@media all and (min-width: $lg ) {
+			justify-content: center;
+			margin: 0 0 0 auto;
+			width: auto;
+		}
+
+		a:hover {
+			svg path {
+				fill: #6188ff;
+			}
+		}
+
+		svg path {
+			transition: fill ease $tr;
+		}
+	}
+}

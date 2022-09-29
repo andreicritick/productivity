@@ -1,0 +1,272 @@
+// Header-buttons
+.button {
+	display: none;
+	font-family: $ff-quick;
+	font-weight: $fw-bold;
+	font-size: $fs-s;
+	line-height: $lh-title;
+	display: flex;
+	align-items: center;
+	padding: 13px 16px;
+	border: 0;
+	border-radius: 2px;
+	background: $button-bg-blue;
+	color: $blue;
+	cursor: pointer;
+	transition: opacity ease-in-out $tr;
+
+	@media all and (min-width: $md) {
+		display: block;
+	}
+
+	&:hover {
+		opacity: $opacity;
+	}
+
+	&.about-button {
+		display: block;
+		background: $button-bg-orange;
+		color: $orange;
+	}
+}
+
+
+
+.burger-button {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	z-index: 100;
+	margin-left: auto;
+
+	@media all and (min-width: $md) {
+		display: none;
+	}
+
+	span {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 100%;
+		height: 2px;
+		background: $headings;
+		border-radius: 5px;
+
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: $headings;
+			border-radius: 5px;
+		}
+
+		&::after {
+			content: "";
+			top: 8px;
+			right: 0;
+		}
+
+		&::before {
+			top: -8px;
+			right: 0;
+		}
+	}
+
+	&:hover{
+		opacity: $opacity;
+	}
+}
+
+.form-button {
+	font-size: $fs-sm;
+	border-radius: 3px;
+	padding: 8px 30px;
+	border: 0;
+	background-color: #98b8f8;
+	color: $white;
+	cursor: pointer;
+	transition: opacity ease-in-out $tr;
+
+	&:hover {
+		opacity: $opacity;
+	}
+}
+
+//hero-buttons
+.hero-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 52px;
+	height: 52px;
+	background: $white;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: $tr;
+	box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+
+	img {
+		display: block;
+		margin-left: 2px;
+		pointer-events: none
+	}
+
+	picture {
+		pointer-events: none
+	}
+
+	&:hover {
+		scale: 1.1;
+	}
+}
+
+//popupp-close-button
+.close-frame {
+	position: absolute;
+	top: 0;
+	right: -30px;
+	width: 30px;
+	height: 30px;
+	font-family: $ff-quick;
+	font-size: $fs-md;
+	transition: $tr;
+	cursor: pointer;
+
+	span {
+		width: 100%;
+		height: 5px;
+		background: $black;
+		position: absolute;
+		top: 10px;
+		right: 0;
+		transform: rotate(45deg);
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 5px;
+			background: $black;
+			top: 0;
+			right: 0;
+			transform: rotate(90deg);
+		}
+	}
+
+	&:hover {
+		opacity: $opacity;
+		animation: frame 0.5s forwards;
+
+		@keyframes frame {
+			0% { scale: 1;} 50% { scale: 1.1;} 100% { scale: 1;}
+		}
+	}
+}
+
+.plan-button {
+	width: 130px;
+	height: 43px;
+	font-family: $ff-quick;
+	font-weight: $fw-bold;
+	font-size: $fs-s;
+	line-height: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0;
+	background: $plan;
+	color: $white;
+	cursor: pointer;
+	transition: opacity ease-in-out $tr;
+	box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+
+	&:hover {
+		opacity: $opacity;
+	}
+
+	img {
+		margin-left: 6px;
+	}
+
+	img, picture {
+		pointer-events: none
+	}
+}
+
+//dropdown button
+.dropdown-button {
+	width: 193px;
+	height: 43px;
+	font-family: $ff-quick;
+	font-weight: $fw-medium;
+	font-size: $fs-s;
+	line-height: 1.2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #7382A3;
+	border: 0;
+	background: #E8ECF4;
+	border-radius: 2px;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $opacity;
+	}
+}
+
+//get-started
+.get-started-button {
+	width: 130px;
+	height: 43px;
+	background: $white;
+	border: 0;
+	color: #565f82;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $opacity;
+	}
+}
+
+//newsletter
+.email-button {
+	width: 184px;
+	height: 59px;
+	border: 0;
+	border-radius: 5px;
+	font-family: $ff-quick;
+	font-weight: $fw-bold;
+	font-size: $fs-s;
+	line-height: 1.2;
+	color: $white;
+	background: #4D6CE1;
+	cursor: pointer;
+	transition: opacity ease $tr;
+	margin: 0 auto;
+
+	@media all and (min-width: $sm) {
+		width: 100px;
+		margin: 0 0 0 14px;
+	}
+
+	@media all and (min-width: $m) {
+		width: 184px;
+	}
+
+	@media all and (min-width: $md) {
+		width: 120px;
+	}
+
+	@media all and (min-width: $lg) {
+		width: 184px;
+	}
+
+	&:hover {
+		opacity: $opacity;
+	}
+}
