@@ -7,12 +7,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
 })
 
 const switchForm = () => {
-    const headerForm    =   document.querySelector( '.header-form' )
-    const formButtons   =   document.querySelectorAll( '.header-button' )
-    const closeButton   =   document.querySelector( '.close-form' )
-    const targetElement =   document.querySelector( '#form-lock' )
+    const headerForm        =   document.querySelector( '.header-form' )
+    const formButtons       =   document.querySelectorAll( '.button.open-form' )
+    const targetElement     =   document.querySelector( '#form-lock' )
 
-    if ( ( ! headerForm ) && ( ! formButtons ) && ( ! closeButton ) && ( ! targetElement ) ) return
+    if ( ( ! headerForm ) && ( ! formButtons ) && ( ! targetElement ) ) return
 
     formButtons.forEach( formButton => {
 
@@ -24,12 +23,14 @@ const switchForm = () => {
         } )
     } )
 
-    closeButton.addEventListener( 'click', () => {
-        if ( ! formButtons) return
+    headerForm.addEventListener( 'click', e => {
+        e.stopPropagation()
 
-        if ( headerForm.classList.contains( 'opened' ) ) {
-            headerForm.classList.remove( 'opened' )
+        const target = e.target
+
+        if ( target.className && target.classList.contains( 'header-form' ) ) {
             enableBodyScroll( targetElement )
+            headerForm.classList.remove( 'opened' )
         }
     } )
 }

@@ -74,14 +74,13 @@
 			margin-bottom: 50px;
 		}
 
-		.header-button {
+		.button {
 			display: flex;
 			justify-content: center;
 			width: 100%;
 			margin-left: 0;
-			background: $headings;
-			color: $white;
-			border-radius: 20px;
+			background: #d2e1ff;
+			color: $blue;
 		}
 
 		.header-icon {
@@ -240,7 +239,7 @@
 		}
 	}
 
-	&-button {
+	.button {
 		@media all and (min-width: $md) {
 			margin-left: 44px;
 		}
